@@ -3,7 +3,7 @@ name: scan
 # webhook is injected from the repo secret DISCORD_WEBHOOK_URL (never in code).
 on:
   schedule:
-    - cron: '*/15 * * * *'   # every 15 min (GitHub's practical floor is ~5 min)
+    - cron: '*/5 * * * *'    # every 5 min (GitHub's floor; often delayed under load)
   workflow_dispatch: {}       # lets you run it manually from the Actions tab
 
 permissions:
