@@ -1,0 +1,19 @@
+# Secrets — never commit these
+.env
+*.webhook
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local run logs (the scanners write CSVs when run locally)
+*.csv
+*.log
+
+# OS
+.DS_Store
+
+# Local tool config
+.claude/
