@@ -18,13 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      # No setup-python needed: the runner ships Python 3 and our code is pure
+      # stdlib. (Fewer actions = fewer deprecation warnings, faster runs.)
       - name: Run scanners
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python run_scans.py
+        run: python3 run_scans.py
       - name: Commit results + alert state
         run: |
           git config user.name  "github-actions[bot]"
