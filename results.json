@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780501527,
-  "count": 2,
+  "generated_unix": 1780501827,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,40 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXMT01D-26",
-      "summary": "Complete-set (YES) KXMT01D-26: sum=0.980 < $1",
-      "edge_c": 1.7,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXMT01D-26-SFOR",
-          "price_c": 97,
-          "url": "https://kalshi.com/markets/kxmt01d"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMT01D-26-MRAI",
-          "price_c": 0,
-          "url": "https://kalshi.com/markets/kxmt01d"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMT01D-26-RCLE",
-          "price_c": 0,
-          "url": "https://kalshi.com/markets/kxmt01d"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMT01D-26-RBUS",
-          "price_c": 0,
-          "url": "https://kalshi.com/markets/kxmt01d"
-        }
-      ],
-      "detail": "Buy YES on all 4 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
