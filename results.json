@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780493126,
-  "count": 3,
+  "generated_unix": 1780493431,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -20,28 +20,6 @@
           "ticker": "KXSENATERIR-26-AWAT",
           "price_c": 6,
           "url": "https://kalshi.com/markets/kxsenaterir"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:HOUSECA13-26",
-      "summary": "Complete-set (YES) HOUSECA13-26: sum=0.960 < $1",
-      "edge_c": 2.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "HOUSECA13-26-D",
-          "price_c": 82,
-          "url": "https://kalshi.com/markets/houseca13"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "HOUSECA13-26-R",
-          "price_c": 14,
-          "url": "https://kalshi.com/markets/houseca13"
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
