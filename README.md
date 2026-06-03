@@ -1,79 +1,114 @@
 # Kalshi coherence & lead-lag scanner
 
-A read-only detector for **internally inconsistent or stale prices** on
-[Kalshi](https://kalshi.com) prediction markets. It runs on a schedule (free,
-via GitHub Actions — no server needed) and posts a Discord alert **only** when it
-finds a trustworthy signal, with a direct link to the market and the exact action
-to take.
+A read-only scanner that watches [Kalshi](https://kalshi.com) prediction markets
+for **internally inconsistent or stale prices** and posts a Discord alert when it
+finds one — with a direct link to the market and the exact action to take. It runs
+on a schedule for free via GitHub Actions; no server required.
 
-> **Honest expectations.** Liquid markets are mostly efficient — these signals
-> are *rare*. This is a disciplined detector that stays quiet, not a money
-> printer. Every alert still needs a human to verify fillable size and fees
-> before trading. Detection only: it never places orders.
+It is **detection only** — it never places orders — and uses only public,
+unauthenticated data, so there are no API keys to manage.
 
-## What it looks for
+> **What to expect.** Liquid markets are mostly efficient, so real signals are
+> rare and the scanner is quiet most of the time. That is the intended behavior:
+> it is tuned to avoid false positives, not to find something every run. Hard
+> locks are unambiguous; the softer signals (and complete-set candidates) still
+> need a human to confirm fillable size and exhaustiveness before trading.
 
-1. **Nesting locks (hard arbitrage).** If event A contains event B, then
-   `P(A) ≥ P(B)`. When the quotes violate that, buying `A-YES + B-NO` pays ≥ \$1
-   for < \$1 — guaranteed. Works across price *thresholds* (`{S>K_low} ⊇ {S>K_high}`)
-   and *deadlines* (`{cross before July} ⊇ {cross before June}`).
-2. **Within-ladder locks.** The same bull-spread check inside a single multi-strike
-   ladder (the survival function must be monotone).
-3. **Center-vs-spot divergence (lead-lag).** Each daily ladder should be centered
-   on the live underlying. Using each ladder's *own* width (not an assumed model),
-   a strike that disagrees with the live [Pyth](https://pyth.network) price — the
-   exact reference Kalshi settles on — is flagged. Fires only when a ladder lags a
-   real move.
+## Scanners
+
+Four independent checks run every cycle (`run_scans.py`):
+
+| # | Scanner | Type | What it flags |
+|---|---|---|---|
+| 1 | **Complete-set sweep** | hard arb* | Across *every* open mutually-exclusive event: buying YES on all outcomes costs < \$1 (or all NO costs < N−1) net of fees. Guarded against non-exhaustive "open field" events that produce fake arbs. |
+| 2 | **Nesting locks** | hard arb | If event A contains event B then `P(A) ≥ P(B)`. A violating quote lets you buy `A-YES + B-NO` for < \$1 with a ≥ \$1 payout. Works across price *thresholds* (`{S>K_low} ⊇ {S>K_high}`) and *deadlines* (`before July ⊇ before June`). |
+| 3 | **Within-ladder locks** | hard arb | The same bull-spread check inside one multi-strike ladder — its survival function must be monotone. |
+| 4 | **Center-vs-spot lead-lag** | soft signal | Each daily price ladder should be centered on the live underlying. Using the ladder's own width and the live [Pyth](https://pyth.network) price, a whole-ladder shift away from spot is flagged — i.e. the ladder lagging a real move. |
+
+\* The complete-set YES side depends on the event being *collectively exhaustive*,
+which can't be proven from prices alone, so those alerts are labeled "verify
+exhaustive" and are the one check that isn't a guaranteed lock.
+
+A separate research tool, `tools/longshot_backtest.py`, tests the
+favorite-longshot hypothesis (are longshots overpriced / favorites underpriced?)
+against settled-market history.
 
 ## How it works
 
-- **Data:** Kalshi's public market API + Pyth's public price feeds. **No API keys,
-  no authentication, read-only.** The only secret is your Discord webhook.
-- **Settlement-exact:** gold/silver/BTC/ETH ladders are compared against the *same*
-  Pyth feed Kalshi settles on, so a gap is a real lag, not a proxy mismatch.
+- **Data:** Kalshi's public market API + Pyth's public price feeds — read-only,
+  no authentication.
+- **Settlement references:** gold/silver ladders are compared against the *exact*
+  Pyth feed Kalshi settles on; crypto (BTC/ETH/SOL/XRP/DOGE) uses Pyth as a close
+  proxy for Kalshi's CF Benchmarks settlement.
+- **Alerts:** a Discord webhook (the only secret). De-duplication state in
+  `state/seen.json` prevents re-spamming a standing finding.
+- **Output:** `results.json` always holds the latest scan, suitable for driving a
+  status page.
 
-## Files
+## Repository layout
 
-| file | role |
+| path | role |
 |---|---|
-| `common.py` | shared helpers: HTTP, Pyth, Kalshi, survival-fit, URL builder |
-| `scanners.py` | the scan functions (locks + center divergence) → findings |
-| `alerts.py` | Discord posting + de-duplication state |
-| `config.py` | what to scan (underlyings, feeds, nesting families, thresholds) |
-| `run_scans.py` | one-shot run (the GitHub Actions entry point) |
+| `common.py` | shared helpers: HTTP, Pyth, Kalshi, survival-fit, fees, URLs |
+| `scanners.py` | the four scanners → structured findings |
+| `alerts.py` | Discord posting + de-duplication |
+| `config.py` | underlyings, feeds, nesting families, thresholds |
+| `run_scans.py` | one-shot run (the scheduled entry point) |
 | `monitor.py` | optional continuous local loop |
 | `.github/workflows/scan.yml` | the free scheduled runner |
-| `tools/discover_families.py` | find new related-market families to add to config |
+| `docs/scheduling.md` | optional: force reliable 5-minute runs |
+| `tools/discover_families.py` | find related-market families to scan |
+| `tools/longshot_backtest.py` | favorite-longshot calibration study |
 
-## Setup
+## Deploy your own
 
-### Run hands-off on GitHub Actions (recommended, free)
-1. Push this repo to GitHub.
-2. Add the webhook as a secret: **Settings → Secrets and variables → Actions →
-   New repository secret**, name `DISCORD_WEBHOOK_URL`, value = your Discord webhook.
-3. That's it — `scan.yml` runs every ~15 min and commits `results.json`.
+1. Fork or clone the repo and push it to your own GitHub account.
+2. Create a Discord webhook (Server Settings → Integrations → Webhooks) and add it
+   as a repository secret named `DISCORD_WEBHOOK_URL`
+   (Settings → Secrets and variables → Actions → New repository secret).
+3. The workflow in `.github/workflows/scan.yml` then runs automatically and
+   commits `results.json` each cycle. Trigger it manually from the Actions tab to
+   test immediately.
 
-### Run locally
+GitHub's built-in schedule is best-effort and often delayed; for reliable
+5-minute cadence, see [`docs/scheduling.md`](docs/scheduling.md).
+
+### Running locally
+
 ```bash
-cp .env.example .env          # then paste your webhook into .env
+cp .env.example .env          # add your webhook to .env
 export $(grep -v '^#' .env | xargs)
-python run_scans.py           # one shot
-DRY_RUN=1 python run_scans.py # print instead of posting
-python monitor.py             # continuous loop
+python3 run_scans.py          # one shot
+DRY_RUN=1 python3 run_scans.py # print findings instead of posting
+python3 monitor.py            # continuous loop
 ```
+
+No third-party packages — Python 3.9+ standard library only.
+
+## Configuration
+
+Everything tunable lives in `config.py`:
+- **`LADDER_VS_SPOT`** — underlyings to track, each with its Kalshi series and Pyth
+  feed id.
+- **`NESTING_SERIES`** — deadline/threshold ladder families (auto-detected;
+  unknown or inactive series are skipped).
+- **`THRESH`** — liquidity, edge, and exhaustiveness thresholds that keep alerts
+  rare and trustworthy.
+
+`tools/discover_families.py` lists Kalshi series that settle on the same
+underlying across horizons — useful for finding new families to add.
 
 ## Security
 
-This repo is safe to make public: it contains **no keys** (all data sources are
-public/read-only). The Discord webhook is the only secret and lives in
-GitHub Actions secrets / your local `.env` (gitignored) — never in the code.
-If you ever add order *execution*, keep those keys out of this repo and off
-shared infra.
-
-## Extending
-
-Add related-market families to `config.py`. Use `tools/discover_families.py` to
-find series that settle on the same underlying across horizons.
+- The scanners read only public endpoints, so the project ships with **no API
+  keys**. The single secret is the Discord webhook, stored as a GitHub Actions
+  secret (or a local `.env`, which is gitignored) — never in the code.
+- The project is detection-only and never authenticates to a trading account. If
+  you extend it to place orders, keep those credentials out of this repo and off
+  shared infrastructure.
 
 ---
-*Not financial advice. For research and educational use.*
+
+*Not financial advice. For research and educational use. Prediction-market trading
+carries risk, and "edges" found by a model are frequently the model's own error —
+verify independently before acting.*
