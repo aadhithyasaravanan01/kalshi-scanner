@@ -1,26 +1,22 @@
 #!/usr/bin/env python3
-"""Favorite-longshot calibration test on Kalshi — DEFINITIVE (pre-game line).
+"""Favorite-longshot test on Kalshi — DEFINITIVE + low-volume deep dive.
 
-Earlier passes used a life-fraction or "early line" price, which is noisy and
-sign-unstable. This version snapshots each settled SPORTS market at its
-PRE-GAME CLOSING LINE: the price a few hours before settlement, anchored to the
-game's actual schedule (occurrence_datetime, which ~= game end) minus LEAD_H.
-That lands just before tip-off for typical game lengths, before in-play prices
-converge to 0/1 — the cleanest "market belief" snapshot available.
-
-Reports: calibration by price decile, BOTH tails (longshot overpricing &
-favorite underpricing), volume-tier segmentation, and fee-adjusted EV.
+Snapshots each settled sports market at its PRE-GAME closing line
+(occurrence_datetime - LEAD_H, anchored to the game schedule). Auto-discovers
+ALL moneyline leagues (category=Sports) to maximize the low-volume long tail,
+then significance-tests the fee-adjusted EV of the implied strategies per volume
+tier, with 95% confidence intervals. An edge is only real if its CI excludes 0.
 """
-import json, urllib.request, calendar, datetime, sys
+import json, urllib.request, calendar, datetime, math, sys
 
 KALSHI = "https://api.elections.kalshi.com/trade-api/v2"
-UA = {"User-Agent": "longshot-backtest/3.0"}
-SPORTS = ["KXNBAGAME", "KXMLBGAME", "KXNHLGAME", "KXATPMATCH", "KXBRASILEIROGAME",
-          "KXBELGIANPLGAME", "KXALEAGUEGAME", "KXACBGAME", "KXBSLGAME"]
-MAX_PER_SERIES = 90
-LEAD_H = 3.0              # snapshot this many hours before occurrence (~game end)
-NEAR_WINDOW = 7200        # accept nearest candle within 2h of the target time
-MIN_VOL = 20.0            # require some real trading to trust the price
+UA = {"User-Agent": "longshot-backtest/4.0"}
+MAX_SERIES = 160
+PER_SERIES = 30
+TOTAL_CAP = 2600          # markets processed (bounds runtime)
+LEAD_H = 3.0
+NEAR_WINDOW = 7200
+MIN_VOL = 15.0
 
 
 def get(url):
@@ -35,6 +31,19 @@ def fee(p):
     return 0.07 * p * (1.0 - p)
 
 
+def discover():
+    try:
+        s = get(f"{KALSHI}/series?category=Sports").get("series", [])
+    except Exception:
+        return []
+    bad = ("SPREAD", "TOTAL", "EXACT", "ROUND", "SCORE", "FIRST", "PROP", "MVP",
+           "SERIES", "DISTANCE", "METHOD", "MINUTE", "KNOCKOUT")
+    out = [x["ticker"] for x in s
+           if (x["ticker"].endswith("GAME") or x["ticker"].endswith("MATCH"))
+           and not any(b in x["ticker"] for b in bad)]
+    return out[:MAX_SERIES]
+
+
 def pregame_line(series, m):
     anchor = m.get("occurrence_datetime") or m.get("close_time")
     if not anchor:
@@ -44,7 +53,7 @@ def pregame_line(series, m):
     except Exception:
         return None
     snap = a - LEAD_H * 3600
-    if snap <= o + 600:               # market must predate the snapshot
+    if snap <= o + 600:
         return None
     url = (f"{KALSHI}/series/{series}/markets/{m['ticker']}/candlesticks"
            f"?start_ts={o}&end_ts={c}&period_interval=60")
@@ -59,83 +68,93 @@ def pregame_line(series, m):
         return None
     best = min(cs, key=lambda x: abs(float(x.get("end_period_ts", 0)) - snap))
     if abs(float(best.get("end_period_ts", 0)) - snap) > NEAR_WINDOW:
-        return None                   # no candle near the pre-game snapshot
+        return None
     try:
         ya = float(best["yes_ask"]["close_dollars"]); yb = float(best["yes_bid"]["close_dollars"])
     except (KeyError, TypeError, ValueError):
         return None
     if ya <= 0 and yb <= 0:
         return None
-    return ((ya + yb) / 2.0, total)
+    return ((ya + yb) / 2.0, ya, yb, total)
 
 
 def collect():
-    pts = []
-    for s in SPORTS:
+    series = discover()
+    print(f"discovered {len(series)} moneyline series", file=sys.stderr)
+    pts, processed = [], 0
+    for s in series:
+        if processed >= TOTAL_CAP:
+            break
         try:
-            ms = get(f"{KALSHI}/markets?series_ticker={s}&status=settled&limit={MAX_PER_SERIES}").get("markets", [])
+            ms = get(f"{KALSHI}/markets?series_ticker={s}&status=settled&limit={PER_SERIES}").get("markets", [])
         except Exception:
             continue
         kept = 0
         for m in ms:
-            r = m.get("result")
-            if r not in ("yes", "no"):
+            if processed >= TOTAL_CAP:
+                break
+            if m.get("result") not in ("yes", "no"):
                 continue
+            processed += 1
             pl = pregame_line(s, m)
             if pl is None:
                 continue
-            p, vol = pl
-            pts.append({"series": s, "p": p, "y": 1 if r == "yes" else 0, "vol": vol})
+            p, ask, bid, vol = pl
+            pts.append({"p": p, "ask": ask, "bid": bid,
+                        "y": 1 if m["result"] == "yes" else 0, "vol": vol})
             kept += 1
-        print(f"  {s:<20} {kept:>3} pts", file=sys.stderr)
+        if kept:
+            print(f"  {s:<22} {kept:>3} (total kept {len(pts)}, processed {processed})", file=sys.stderr)
     return pts
 
 
-def calib(pts, label):
-    print(f"\n=== {label}  (n={len(pts)}) ===")
-    if len(pts) < 25:
-        print("  too few points"); return
-    print(f"  {'bin':>9} {'n':>4} {'meanP':>7} {'emp':>7} {'gap':>7} {'fee-adj EV':>12}")
-    for i in range(10):
-        lo, hi = i / 10, (i + 1) / 10
-        g = [x for x in pts if lo <= x["p"] < hi or (hi == 1.0 and x["p"] == 1.0)]
-        if len(g) < 6:
-            continue
-        mp = sum(x["p"] for x in g) / len(g)
-        emp = sum(x["y"] for x in g) / len(g)
-        gap = emp - mp
-        ev = (-gap - fee(mp)) if mp < 0.5 else (gap - fee(mp))
-        tag = "fadeNO" if mp < 0.5 else "backYES"
-        print(f"  {lo:.1f}-{hi:.1f} {len(g):>4} {mp:>7.3f} {emp:>7.3f} {gap:>+7.3f}  {tag}:{ev*100:>+5.1f}c")
+def ev_ci(evs):
+    """(n, mean_cents, lo95_cents, hi95_cents)."""
+    n = len(evs)
+    if n < 2:
+        return n, 0, 0, 0
+    m = sum(evs) / n
+    var = sum((e - m) ** 2 for e in evs) / (n - 1)
+    se = math.sqrt(var / n)
+    return n, m * 100, (m - 1.96 * se) * 100, (m + 1.96 * se) * 100
 
 
-def tails(pts, label):
+def tier_report(pts, label):
     lo = [x for x in pts if x["p"] < 0.30]
     hi = [x for x in pts if x["p"] > 0.70]
-    parts = []
-    if len(lo) >= 10:
-        gap = sum(x["y"] - x["p"] for x in lo) / len(lo)
-        ev = sum((x["p"] - x["y"]) - fee(x["p"]) for x in lo) / len(lo)
-        parts.append(f"longshots n={len(lo)} gap={gap:+.3f} fadeNO_EV={ev*100:+.1f}c")
-    if len(hi) >= 10:
-        gap = sum(x["y"] - x["p"] for x in hi) / len(hi)
-        ev = sum((x["y"] - x["p"]) - fee(x["p"]) for x in hi) / len(hi)
-        parts.append(f"favorites n={len(hi)} gap={gap:+.3f} backYES_EV={ev*100:+.1f}c")
-    print(f"  {label:<22} " + (" | ".join(parts) if parts else "too few tail points"))
+    # MID-price EV (theoretical) vs EXECUTABLE EV (cross the spread + fee):
+    #   fade longshot = buy NO at no_ask = 1 - yes_bid
+    #   back favorite = buy YES at yes_ask
+    fade_mid = [(x["p"] - x["y"]) - fee(x["p"]) for x in lo]
+    back_mid = [(x["y"] - x["p"]) - fee(x["p"]) for x in hi]
+    fade_exe = [(x["bid"] - x["y"]) - fee(1 - x["bid"]) for x in lo]
+    back_exe = [(x["y"] - x["ask"]) - fee(x["ask"]) for x in hi]
+    avg_spread_lo = sum(x["ask"] - x["bid"] for x in lo) / len(lo) if lo else 0
+    avg_spread_hi = sum(x["ask"] - x["bid"] for x in hi) / len(hi) if hi else 0
+    print(f"\n  [{label}]  (n={len(pts)})  avg spread: longshots {avg_spread_lo*100:.1f}c, favorites {avg_spread_hi*100:.1f}c")
+    for name, mid, exe in (("fade longshots (buy NO) ", fade_mid, fade_exe),
+                           ("back favorites (buy YES)", back_mid, back_exe)):
+        if len(exe) < 10:
+            print(f"    {name}: too few (n={len(exe)})"); continue
+        _, mm, _, _ = ev_ci(mid)
+        n, em, el, eh = ev_ci(exe)
+        sig = "  ** SIGNIFICANT +EV **" if el > 0 else ("  (sig LOSS)" if eh < 0 else "")
+        print(f"    {name}: n={n:>4}  mid EV={mm:+5.2f}c | EXEC EV={em:+5.2f}c "
+              f"95% CI [{el:+5.2f}, {eh:+5.2f}]c{sig}")
 
 
 def main():
     pts = collect()
-    calib(pts, "SPORTS pre-game line")
-    print("\n=== Tail bias + fee-adjusted EV (longshot bias => longshot gap<0; favorite bias => favorite gap>0) ===")
-    tails(pts, "all sports")
-    if len(pts) >= 40:
-        vols = sorted(x["vol"] for x in pts)
-        t1, t2 = vols[len(vols) // 3], vols[2 * len(vols) // 3]
-        print("\n=== by volume tier (test: low/mid vol = more bias?) ===")
-        tails([x for x in pts if x["vol"] <= t1], f"low vol (<= {t1:.0f})")
-        tails([x for x in pts if t1 < x["vol"] <= t2], "mid vol")
-        tails([x for x in pts if x["vol"] > t2], f"high vol (> {t2:.0f})")
+    print(f"\n==== TOTAL usable points: {len(pts)} ====")
+    if len(pts) < 50:
+        print("too few"); return
+    tier_report(pts, "ALL")
+    vols = sorted(x["vol"] for x in pts)
+    t1, t2 = vols[len(vols) // 3], vols[2 * len(vols) // 3]
+    tier_report([x for x in pts if x["vol"] <= t1], f"LOW vol <= {t1:.0f}")
+    tier_report([x for x in pts if t1 < x["vol"] <= t2], "MID vol")
+    tier_report([x for x in pts if x["vol"] > t2], f"HIGH vol > {t2:.0f}")
+    print("\nAn edge is real only if its 95% CI excludes 0 (and is positive).")
 
 
 if __name__ == "__main__":
