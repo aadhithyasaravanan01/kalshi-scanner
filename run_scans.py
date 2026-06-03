@@ -11,6 +11,7 @@ def run():
     for u in config.LADDER_VS_SPOT:
         findings += scanners.scan_ladder_vs_spot(u, config.THRESH)
     findings += scanners.scan_nesting(config.NESTING_SERIES, config.THRESH)
+    findings += scanners.scan_complete_set(config.THRESH)
 
     findings.sort(key=lambda f: -abs(f.get("edge_c", 0)))
     with open("results.json", "w") as f:

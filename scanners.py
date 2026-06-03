@@ -87,6 +87,93 @@ def scan_ladder_vs_spot(u, T):
     return out
 
 
+def scan_complete_set(T):
+    """Sweep ALL open events for complete-set mispricing in mutually-exclusive
+    (and collectively exhaustive) events:
+      YES side: buy YES on every outcome -> $1 payout. Arb if sum(yes_ask)+fees<$1.
+      NO  side: buy NO on every outcome  -> (N-1) payout. Arb if sum(no_ask)+fees<N-1.
+    Exhaustiveness guard: 'mutually_exclusive' != collectively exhaustive (a wide
+    field sums far below $1 and looks like a fake 90c arb), so require YES gross
+    >= cs_min_gross. NO side is naturally immune."""
+    out = []
+    cursor, pages = "", 0
+    while pages < T["cs_max_pages"]:
+        pages += 1
+        url = f"{common.KALSHI}/events?limit=200&status=open&with_nested_markets=true"
+        if cursor:
+            url += "&cursor=" + cursor
+        try:
+            d = common.http_get_json(url)
+        except Exception:
+            break
+        for ev in d.get("events", []):
+            if not ev.get("mutually_exclusive"):
+                continue
+            mkts = ev.get("markets", [])
+            if len(mkts) < 2:
+                continue
+            out += _complete_set_yes(ev, mkts, T)
+            out += _complete_set_no(ev, mkts, T)
+        cursor = d.get("cursor") or ""
+        if not cursor:
+            break
+    return out
+
+
+def _legs_priced(mkts, ask_key, size_key):
+    legs = []
+    for m in mkts:
+        try:
+            a = float(m[ask_key]); sz = float(m.get(size_key) or 0)
+        except (TypeError, ValueError, KeyError):
+            return None
+        if not (0.0 < a < 1.0):
+            return None
+        legs.append((a, sz, m))
+    return legs
+
+
+def _complete_set_yes(ev, mkts, T):
+    legs = _legs_priced(mkts, "yes_ask_dollars", "yes_ask_size_fp")
+    if not legs or any(sz < T["min_size_lock"] for _, sz, _ in legs):
+        return []
+    gross = sum(a for a, _, _ in legs)
+    net = sum(a + common.kalshi_fee(a) for a, _, _ in legs)
+    if gross < T["cs_min_gross"] or net >= 1.0 - T["min_lock_c"] / 100.0:
+        return []
+    return [{
+        "scanner": "complete-set", "kind": "LOCK",
+        "key": "cs-yes:" + ev["event_ticker"],
+        "summary": f"Complete-set (YES) {ev['event_ticker']}: sum={gross:.3f} < $1",
+        "edge_c": round((1.0 - net) * 100, 1),
+        "legs": [{"action": "BUY YES", "ticker": m["ticker"],
+                  "price_c": round(a * 100), "url": common.kalshi_url(m["ticker"])}
+                 for a, _, m in legs],
+        "detail": f"Buy YES on all {len(legs)} outcomes; net ${net:.2f} for $1. "
+                  f"VERIFY the event is collectively exhaustive (no missing outcome) + size.",
+    }]
+
+
+def _complete_set_no(ev, mkts, T):
+    legs = _legs_priced(mkts, "no_ask_dollars", "yes_bid_size_fp")  # buy NO lifts yes bids
+    if not legs or any(sz < T["min_size_lock"] for _, sz, _ in legs):
+        return []
+    n = len(legs)
+    net = sum(a + common.kalshi_fee(a) for a, _, _ in legs)
+    if net >= (n - 1) - T["min_lock_c"] / 100.0:
+        return []
+    return [{
+        "scanner": "complete-set", "kind": "LOCK",
+        "key": "cs-no:" + ev["event_ticker"],
+        "summary": f"Complete-set (NO) {ev['event_ticker']}: sum={net:.3f} < {n-1}",
+        "edge_c": round(((n - 1) - net) * 100, 1),
+        "legs": [{"action": "BUY NO", "ticker": m["ticker"],
+                  "price_c": round(a * 100), "url": common.kalshi_url(m["ticker"])}
+                 for a, _, m in legs],
+        "detail": f"Buy NO on all {n} outcomes; net ${net:.2f} for ${n-1} payout. Verify size.",
+    }]
+
+
 def scan_nesting(series_list, T):
     """Cumulative-nesting LOCKs (deadline ⊇ deadline, or threshold ⊇ threshold)."""
     out = []

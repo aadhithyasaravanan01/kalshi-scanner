@@ -25,6 +25,11 @@ def yes_mid(ya, na):
     return (ya + (1.0 - na)) / 2.0
 
 
+def kalshi_fee(p):
+    """Kalshi taker fee per contract, amortized (un-rounded): 0.07*p*(1-p)."""
+    return 0.07 * p * (1.0 - p)
+
+
 def pyth_price(feed):
     d = http_get_json(f"{HERMES}/updates/price/latest?ids[]={feed}")
     p = d["parsed"][0]["price"]
