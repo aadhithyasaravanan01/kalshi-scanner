@@ -25,9 +25,17 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python3 run_scans.py
       - name: Commit results + alert state
+        # Never fail the workflow over a harmless push race: another run (or a
+        # dev push) may advance origin between our commit and push. Rebase and
+        # retry; if it still can't push, the next run catches up.
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add results.json state/seen.json 2>/dev/null || true
           git commit -m "scan @ $(date -u +%FT%TZ)" || { echo "no changes"; exit 0; }
-          git push
+          for i in 1 2 3; do
+            git pull --rebase origin main || true
+            git push origin main && exit 0
+            echo "push race, retry $i"; sleep 3
+          done
+          echo "push deferred to next run"; exit 0

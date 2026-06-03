@@ -12,9 +12,17 @@ MONTHS = {m: i for i, m in enumerate(
      "september", "october", "november", "december"], 1)}
 
 
-def http_get_json(url, timeout=20):
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
-        return json.loads(r.read().decode())
+def http_get_json(url, timeout=20, retries=2):
+    last = None
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
+                return json.loads(r.read().decode())
+        except Exception as e:                  # transient: rate-limit, timeout, blip
+            last = e
+            if attempt < retries:
+                time.sleep(0.8 * (attempt + 1))
+    raise last
 
 
 def Phi(z):

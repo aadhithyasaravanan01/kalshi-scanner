@@ -6,12 +6,22 @@ import json, time
 import config, scanners, alerts
 
 
+def _safe(name, fn):
+    """A transient error in one scanner must never fail the whole run."""
+    try:
+        return fn()
+    except Exception as e:
+        print(f"[scan error] {name}: {type(e).__name__}: {e}")
+        return []
+
+
 def run():
     findings = []
     for u in config.LADDER_VS_SPOT:
-        findings += scanners.scan_ladder_vs_spot(u, config.THRESH)
-    findings += scanners.scan_nesting(config.NESTING_SERIES, config.THRESH)
-    findings += scanners.scan_complete_set(config.THRESH)
+        findings += _safe(f"ladder:{u['label']}",
+                          lambda u=u: scanners.scan_ladder_vs_spot(u, config.THRESH))
+    findings += _safe("nesting", lambda: scanners.scan_nesting(config.NESTING_SERIES, config.THRESH))
+    findings += _safe("complete-set", lambda: scanners.scan_complete_set(config.THRESH))
 
     findings.sort(key=lambda f: -abs(f.get("edge_c", 0)))
     with open("results.json", "w") as f:
