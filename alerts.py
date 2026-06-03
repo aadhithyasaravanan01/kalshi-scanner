@@ -16,7 +16,9 @@ def _post(content):
         print(f"[alert{' DRY' if DRY else ' NO-WEBHOOK'}]\n{content}\n")
         return 204
     data = json.dumps({"username": "kalshi-arb-scanner", "content": content}).encode()
-    req = urllib.request.Request(WEBHOOK, data=data, headers={"Content-Type": "application/json"})
+    req = urllib.request.Request(WEBHOOK, data=data,
+                                 headers={"Content-Type": "application/json",
+                                          "User-Agent": "kalshi-arb-scanner/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             return r.status
