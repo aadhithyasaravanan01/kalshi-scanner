@@ -1,7 +1,23 @@
 {
-  "generated_unix": 1780457119,
-  "count": 1,
+  "generated_unix": 1780457429,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "SOL",
+      "kind": "CENTER",
+      "key": "center:KXSOLD-26JUN0317:N",
+      "summary": "SOL ladder lagging spot 73.8 (center 76.0)",
+      "edge_c": -12.7,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSOLD-26JUN0317-T72.9999",
+          "price_c": 33,
+          "url": "https://kalshi.com/markets/kxsold"
+        }
+      ],
+      "detail": "Whole ladder centered 76.0 vs spot 73.8 (+0.34 sigma). Best strike K=73: fair 54.8% vs market 67.5%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
