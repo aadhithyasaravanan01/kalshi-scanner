@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780599928,
-  "count": 1,
+  "generated_unix": 1780600228,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,28 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXWTACHALLENGERMATCH-26JUN04TIMBOS",
+      "summary": "Complete-set (NO) KXWTACHALLENGERMATCH-26JUN04TIMBOS: sum=0.983 < 1",
+      "edge_c": 1.7,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXWTACHALLENGERMATCH-26JUN04TIMBOS-TIM",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxwtachallengermatch"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXWTACHALLENGERMATCH-26JUN04TIMBOS-BOS",
+          "price_c": 97,
+          "url": "https://kalshi.com/markets/kxwtachallengermatch"
+        }
+      ],
+      "detail": "Buy NO on all 2 outcomes; net $0.98 for $1 payout. Verify size."
     }
   ]
 }
