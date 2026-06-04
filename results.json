@@ -1,5 +1,44 @@
 {
-  "generated_unix": 1780570249,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780570527,
+  "count": 2,
+  "findings": [
+    {
+      "scanner": "BTC",
+      "kind": "CENTER",
+      "key": "center:KXBTCD-26JUN0407:N",
+      "summary": "BTC ladder lagging spot 62272.3 (center 62338.9)",
+      "edge_c": -22.5,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXBTCD-26JUN0407-T62299.99",
+          "price_c": 36,
+          "url": "https://kalshi.com/markets/kxbtcd"
+        }
+      ],
+      "detail": "Whole ladder centered 62338.9 vs spot 62272.3 (+0.48 sigma). Best strike K=62300: fair 42.0% vs market 64.5%."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.967 < $1",
+      "edge_c": 2.4,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
