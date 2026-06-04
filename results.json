@@ -1,44 +1,5 @@
 {
-  "generated_unix": 1780533028,
-  "count": 2,
-  "findings": [
-    {
-      "scanner": "SOL",
-      "kind": "CENTER",
-      "key": "center:KXSOLD-26JUN0417:N",
-      "summary": "SOL ladder lagging spot 70.7 (center 74.5)",
-      "edge_c": -17.7,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXSOLD-26JUN0417-T67.9999",
-          "price_c": 20,
-          "url": "https://kalshi.com/markets/kxsold"
-        }
-      ],
-      "detail": "Whole ladder centered 74.5 vs spot 70.7 (+0.46 sigma). Best strike K=68: fair 62.8% vs market 80.5%."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.967 < $1",
-      "edge_c": 2.4,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-RMCK",
-          "price_c": 91,
-          "url": "https://kalshi.com/markets/kxsenaterir"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-AWAT",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxsenaterir"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    }
-  ]
+  "generated_unix": 1780533342,
+  "count": 0,
+  "findings": []
 }
