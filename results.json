@@ -1,7 +1,35 @@
 {
-  "generated_unix": 1780569327,
-  "count": 1,
+  "generated_unix": 1780569624,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXINTLFRIENDLYGAME-26JUN04AFGBAN",
+      "summary": "Complete-set (NO) KXINTLFRIENDLYGAME-26JUN04AFGBAN: sum=1.962 < 2",
+      "edge_c": 3.8,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN04AFGBAN-AFG",
+          "price_c": 39,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN04AFGBAN-BAN",
+          "price_c": 77,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN04AFGBAN-TIE",
+          "price_c": 76,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.96 for $2 payout. Verify size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
