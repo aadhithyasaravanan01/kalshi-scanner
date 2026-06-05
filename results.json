@@ -1,7 +1,55 @@
 {
-  "generated_unix": 1780685424,
-  "count": 1,
+  "generated_unix": 1780685730,
+  "count": 4,
   "findings": [
+    {
+      "scanner": "XRP",
+      "kind": "CENTER",
+      "key": "center:KXXRPD-26JUN0517:N",
+      "summary": "XRP ladder lagging spot 1.1 (center 1.1)",
+      "edge_c": -14.2,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXXRPD-26JUN0517-T1.0799",
+          "price_c": 34,
+          "url": "https://kalshi.com/markets/kxxrpd"
+        }
+      ],
+      "detail": "Whole ladder centered 1.1 vs spot 1.1 (+0.38 sigma). Best strike K=1: fair 52.8% vs market 67.0%."
+    },
+    {
+      "scanner": "SOL",
+      "kind": "CENTER",
+      "key": "center:KXSOLD-26JUN0517:N",
+      "summary": "SOL ladder lagging spot 62.7 (center 63.1)",
+      "edge_c": -12.3,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSOLD-26JUN0517-T62.9999",
+          "price_c": 47,
+          "url": "https://kalshi.com/markets/kxsold"
+        }
+      ],
+      "detail": "Whole ladder centered 63.1 vs spot 62.7 (+0.33 sigma). Best strike K=63: fair 41.2% vs market 53.5%."
+    },
+    {
+      "scanner": "BTC",
+      "kind": "CENTER",
+      "key": "center:KXBTCD-26JUN0515:N",
+      "summary": "BTC ladder lagging spot 59167.1 (center 59226.7)",
+      "edge_c": -10.4,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXBTCD-26JUN0515-T59099.99",
+          "price_c": 29,
+          "url": "https://kalshi.com/markets/kxbtcd"
+        }
+      ],
+      "detail": "Whole ladder centered 59226.7 vs spot 59167.1 (+0.26 sigma). Best strike K=59100: fair 61.6% vs market 72.0%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
