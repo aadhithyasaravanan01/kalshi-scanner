@@ -1,7 +1,35 @@
 {
-  "generated_unix": 1780651828,
-  "count": 1,
+  "generated_unix": 1780652120,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXGOVCTNOMR-26",
+      "summary": "Complete-set (YES) KXGOVCTNOMR-26: sum=0.969 < $1",
+      "edge_c": 2.4,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVCTNOMR-26-ESTE",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxgovctnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVCTNOMR-26-RFAZ",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxgovctnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVCTNOMR-26-BMCC",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxgovctnomr"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
