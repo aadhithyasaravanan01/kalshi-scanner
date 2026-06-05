@@ -1,5 +1,56 @@
 {
-  "generated_unix": 1780687544,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780687827,
+  "count": 2,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.966 < $1",
+      "edge_c": 2.5,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXFIFAWGAME-26JUN05IRLNLD",
+      "summary": "Complete-set (NO) KXFIFAWGAME-26JUN05IRLNLD: sum=1.987 < 2",
+      "edge_c": 1.3,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-IRL",
+          "price_c": 53,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-NLD",
+          "price_c": 71,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-TIE",
+          "price_c": 70,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.99 for $2 payout. Verify size."
+    }
+  ]
 }
