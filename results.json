@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780682433,
-  "count": 1,
+  "generated_unix": 1780682721,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXINTLFRIENDLYGAME-26JUN06MYAGUM",
+      "summary": "Complete-set (NO) KXINTLFRIENDLYGAME-26JUN06MYAGUM: sum=1.987 < 2",
+      "edge_c": 1.3,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN06MYAGUM-MYA",
+          "price_c": 12,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN06MYAGUM-GUM",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN06MYAGUM-TIE",
+          "price_c": 92,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.99 for $2 payout. Verify size."
     }
   ]
 }
