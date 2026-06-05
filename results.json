@@ -1,7 +1,23 @@
 {
-  "generated_unix": 1780699822,
-  "count": 1,
+  "generated_unix": 1780700128,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "BTC",
+      "kind": "CENTER",
+      "key": "center:KXBTCD-26JUN0519:Y",
+      "summary": "BTC ladder lagging spot 61867.1 (center 61811.1)",
+      "edge_c": 14.7,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXBTCD-26JUN0519-T61899.99",
+          "price_c": 28,
+          "url": "https://kalshi.com/markets/kxbtcd"
+        }
+      ],
+      "detail": "Whole ladder centered 61811.1 vs spot 61867.1 (-0.36 sigma). Best strike K=61900: fair 41.7% vs market 27.0%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
