@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780687827,
-  "count": 2,
+  "generated_unix": 1780688131,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,34 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-no:KXFIFAWGAME-26JUN05IRLNLD",
-      "summary": "Complete-set (NO) KXFIFAWGAME-26JUN05IRLNLD: sum=1.987 < 2",
-      "edge_c": 1.3,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-IRL",
-          "price_c": 53,
-          "url": "https://kalshi.com/markets/kxfifawgame"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-NLD",
-          "price_c": 71,
-          "url": "https://kalshi.com/markets/kxfifawgame"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXFIFAWGAME-26JUN05IRLNLD-TIE",
-          "price_c": 70,
-          "url": "https://kalshi.com/markets/kxfifawgame"
-        }
-      ],
-      "detail": "Buy NO on all 3 outcomes; net $1.99 for $2 payout. Verify size."
     }
   ]
 }
