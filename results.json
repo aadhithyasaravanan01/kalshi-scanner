@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780757129,
-  "count": 1,
+  "generated_unix": 1780757420,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,28 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXTESTMATCH-26JUN040600NZENG",
+      "summary": "Complete-set (YES) KXTESTMATCH-26JUN040600NZENG: sum=0.980 < $1",
+      "edge_c": 1.1,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXTESTMATCH-26JUN040600NZENG-ENG",
+          "price_c": 92,
+          "url": "https://kalshi.com/markets/kxtestmatch"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTESTMATCH-26JUN040600NZENG-NZ",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxtestmatch"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
