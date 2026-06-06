@@ -1,22 +1,22 @@
 {
-  "generated_unix": 1780719328,
+  "generated_unix": 1780719621,
   "count": 3,
   "findings": [
     {
-      "scanner": "SOL",
+      "scanner": "XRP",
       "kind": "CENTER",
-      "key": "center:KXSOLD-26JUN0617:N",
-      "summary": "SOL ladder lagging spot 61.7 (center 62.3)",
-      "edge_c": -13.9,
+      "key": "center:KXXRPD-26JUN0617:N",
+      "summary": "XRP ladder lagging spot 1.1 (center 1.1)",
+      "edge_c": -16.5,
       "legs": [
         {
           "action": "BUY NO",
-          "ticker": "KXSOLD-26JUN0617-T61.9999",
-          "price_c": 42,
-          "url": "https://kalshi.com/markets/kxsold"
+          "ticker": "KXXRPD-26JUN0617-T1.0599",
+          "price_c": 27,
+          "url": "https://kalshi.com/markets/kxxrpd"
         }
       ],
-      "detail": "Whole ladder centered 62.3 vs spot 61.7 (+0.26 sigma). Best strike K=62: fair 44.6% vs market 58.5%."
+      "detail": "Whole ladder centered 1.1 vs spot 1.1 (+0.40 sigma). Best strike K=1: fair 57.5% vs market 74.0%."
     },
     {
       "scanner": "complete-set",
