@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780729229,
-  "count": 1,
+  "generated_unix": 1780729525,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,28 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWT20MATCH-26JUN060200SINKUW",
+      "summary": "Complete-set (YES) KXWT20MATCH-26JUN060200SINKUW: sum=0.980 < $1",
+      "edge_c": 1.3,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWT20MATCH-26JUN060200SINKUW-KUW",
+          "price_c": 94,
+          "url": "https://kalshi.com/markets/kxwt20match"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWT20MATCH-26JUN060200SINKUW-SIN",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxwt20match"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
