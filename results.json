@@ -1,5 +1,66 @@
 {
-  "generated_unix": 1780718739,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780719029,
+  "count": 3,
+  "findings": [
+    {
+      "scanner": "SOL",
+      "kind": "CENTER",
+      "key": "center:KXSOLD-26JUN0617:N",
+      "summary": "SOL ladder lagging spot 61.9 (center 62.5)",
+      "edge_c": -15.9,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSOLD-26JUN0617-T61.9999",
+          "price_c": 37,
+          "url": "https://kalshi.com/markets/kxsold"
+        }
+      ],
+      "detail": "Whole ladder centered 62.5 vs spot 61.9 (+0.29 sigma). Best strike K=62: fair 47.6% vs market 63.5%."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSCPRIMARY-06R26",
+      "summary": "Complete-set (YES) KXSCPRIMARY-06R26: sum=0.960 < $1",
+      "edge_c": 2.5,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSCPRIMARY-06R26-JPET",
+          "price_c": 10,
+          "url": "https://kalshi.com/markets/kxscprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSCPRIMARY-06R26-MWAS",
+          "price_c": 86,
+          "url": "https://kalshi.com/markets/kxscprimary"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.966 < $1",
+      "edge_c": 2.5,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
