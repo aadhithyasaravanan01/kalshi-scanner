@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1780719621,
-  "count": 3,
+  "generated_unix": 1780719921,
+  "count": 2,
   "findings": [
     {
       "scanner": "XRP",
       "kind": "CENTER",
       "key": "center:KXXRPD-26JUN0617:N",
       "summary": "XRP ladder lagging spot 1.1 (center 1.1)",
-      "edge_c": -16.5,
+      "edge_c": -15.9,
       "legs": [
         {
           "action": "BUY NO",
@@ -16,29 +16,7 @@
           "url": "https://kalshi.com/markets/kxxrpd"
         }
       ],
-      "detail": "Whole ladder centered 1.1 vs spot 1.1 (+0.40 sigma). Best strike K=1: fair 57.5% vs market 74.0%."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXSCPRIMARY-06R26",
-      "summary": "Complete-set (YES) KXSCPRIMARY-06R26: sum=0.960 < $1",
-      "edge_c": 2.5,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXSCPRIMARY-06R26-JPET",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxscprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXSCPRIMARY-06R26-MWAS",
-          "price_c": 86,
-          "url": "https://kalshi.com/markets/kxscprimary"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Whole ladder centered 1.1 vs spot 1.1 (+0.39 sigma). Best strike K=1: fair 58.1% vs market 74.0%."
     },
     {
       "scanner": "complete-set",
