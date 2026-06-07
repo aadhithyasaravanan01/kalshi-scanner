@@ -1,7 +1,23 @@
 {
-  "generated_unix": 1780842030,
-  "count": 1,
+  "generated_unix": 1780842326,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "XRP",
+      "kind": "CENTER",
+      "key": "center:KXXRPD-26JUN0717:Y",
+      "summary": "XRP ladder lagging spot 1.1 (center 1.1)",
+      "edge_c": 8.7,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXXRPD-26JUN0717-T1.1199",
+          "price_c": 61,
+          "url": "https://kalshi.com/markets/kxxrpd"
+        }
+      ],
+      "detail": "Whole ladder centered 1.1 vs spot 1.1 (-0.32 sigma). Best strike K=1: fair 69.2% vs market 60.5%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
