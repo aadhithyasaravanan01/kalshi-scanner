@@ -1,39 +1,7 @@
 {
-  "generated_unix": 1780952435,
-  "count": 4,
+  "generated_unix": 1780952727,
+  "count": 2,
   "findings": [
-    {
-      "scanner": "XRP",
-      "kind": "CENTER",
-      "key": "center:KXXRPD-26JUN0917:Y",
-      "summary": "XRP ladder lagging spot 1.2 (center 0.9)",
-      "edge_c": 38.2,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXXRPD-26JUN0917-T1.2399",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxxrpd"
-        }
-      ],
-      "detail": "Whole ladder centered 0.9 vs spot 1.2 (-0.38 sigma). Best strike K=1: fair 46.7% vs market 8.5%."
-    },
-    {
-      "scanner": "SOL",
-      "kind": "CENTER",
-      "key": "center:KXSOLD-26JUN0917:N",
-      "summary": "SOL ladder lagging spot 67.5 (center 70.0)",
-      "edge_c": -20.5,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXSOLD-26JUN0917-T63.9999",
-          "price_c": 11,
-          "url": "https://kalshi.com/markets/kxsold"
-        }
-      ],
-      "detail": "Whole ladder centered 70.0 vs spot 67.5 (+0.38 sigma). Best strike K=64: fair 70.0% vs market 90.5%."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
@@ -60,8 +28,8 @@
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXNEXTAG-29",
-      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.957 < $1",
-      "edge_c": 1.6,
+      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.960 < $1",
+      "edge_c": 1.3,
       "legs": [
         {
           "action": "BUY YES",
@@ -162,7 +130,7 @@
         {
           "action": "BUY YES",
           "ticker": "KXNEXTAG-29-RDES",
-          "price_c": 2,
+          "price_c": 3,
           "url": "https://kalshi.com/markets/kxnextag"
         },
         {
@@ -196,7 +164,7 @@
           "url": "https://kalshi.com/markets/kxnextag"
         }
       ],
-      "detail": "Buy YES on all 22 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy YES on all 22 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
