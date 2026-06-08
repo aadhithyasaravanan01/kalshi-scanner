@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1780949727,
+  "generated_unix": 1780950027,
   "count": 3,
   "findings": [
     {
       "scanner": "SOL",
       "kind": "CENTER",
       "key": "center:KXSOLD-26JUN0917:N",
-      "summary": "SOL ladder lagging spot 67.1 (center 70.0)",
-      "edge_c": -22.9,
+      "summary": "SOL ladder lagging spot 67.0 (center 69.2)",
+      "edge_c": -19.8,
       "legs": [
         {
           "action": "BUY NO",
@@ -16,7 +16,7 @@
           "url": "https://kalshi.com/markets/kxsold"
         }
       ],
-      "detail": "Whole ladder centered 70.0 vs spot 67.1 (+0.39 sigma). Best strike K=63: fair 70.6% vs market 93.5%."
+      "detail": "Whole ladder centered 69.2 vs spot 67.0 (+0.35 sigma). Best strike K=63: fair 73.7% vs market 93.5%."
     },
     {
       "scanner": "complete-set",
@@ -44,8 +44,8 @@
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXNEXTAG-29",
-      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.959 < $1",
-      "edge_c": 1.4,
+      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.960 < $1",
+      "edge_c": 1.3,
       "legs": [
         {
           "action": "BUY YES",
