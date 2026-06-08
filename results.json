@@ -1,7 +1,29 @@
 {
-  "generated_unix": 1780910725,
-  "count": 2,
+  "generated_unix": 1780911031,
+  "count": 3,
   "findings": [
+    {
+      "scanner": "gold",
+      "kind": "LOCK",
+      "key": "lock:KXGOLDD-26JUN0817-T4313:KXGOLDD-26JUN0817-T4323",
+      "summary": "Nesting lock: KXGOLDD-26JUN0817-T4313 \u2287 KXGOLDD-26JUN0817-T4323",
+      "edge_c": 3.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOLDD-26JUN0817-T4313",
+          "price_c": 28,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXGOLDD-26JUN0817-T4323",
+          "price_c": 69,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        }
+      ],
+      "detail": "Guaranteed \u2265$1 payout for $0.97. Verify size before trading."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
