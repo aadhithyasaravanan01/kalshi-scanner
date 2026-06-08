@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1780946729,
+  "generated_unix": 1780947029,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.964 < $1",
-      "edge_c": 2.7,
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.965 < $1",
+      "edge_c": 2.6,
       "legs": [
         {
           "action": "BUY YES",
