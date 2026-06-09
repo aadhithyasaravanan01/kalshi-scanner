@@ -1,5 +1,64 @@
 {
-  "generated_unix": 1781036727,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781037027,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXPRIMARYMATCHUP-GOVSCNOMR26",
+      "summary": "Complete-set (YES) KXPRIMARYMATCHUP-GOVSCNOMR26: sum=0.950 < $1",
+      "edge_c": 2.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-PEVENOONE",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-PEVEAWIL",
+          "price_c": 72,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-PEVERRED",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-PEVERNOR",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-PEVENMAC",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-AWILNMAC",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-AWILRRED",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPRIMARYMATCHUP-GOVSCNOMR26-AWILRNOR",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxprimarymatchup"
+        }
+      ],
+      "detail": "Buy YES on all 8 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
