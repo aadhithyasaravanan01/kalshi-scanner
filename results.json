@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1780983631,
-  "count": 1,
+  "generated_unix": 1780983925,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -53,6 +53,28 @@
         }
       ],
       "detail": "Buy NO on all 7 outcomes; net $5.95 for $6 payout. Verify size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.953 < $1",
+      "edge_c": 3.7,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 90,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 5,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.96 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
