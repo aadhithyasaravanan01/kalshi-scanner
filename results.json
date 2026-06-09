@@ -1,5 +1,58 @@
 {
-  "generated_unix": 1780980347,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780980621,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXSTPETERSBURGMAYOR-26",
+      "summary": "Complete-set (NO) KXSTPETERSBURGMAYOR-26: sum=5.950 < 6",
+      "edge_c": 5.0,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-KWEL",
+          "price_c": 73,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-CCRI",
+          "price_c": 72,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-BGAB",
+          "price_c": 89,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-JLAR",
+          "price_c": 72,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-KBAT",
+          "price_c": 98,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-PCON",
+          "price_c": 97,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXSTPETERSBURGMAYOR-26-MSCR",
+          "price_c": 88,
+          "url": "https://kalshi.com/markets/kxstpetersburgmayor"
+        }
+      ],
+      "detail": "Buy NO on all 7 outcomes; net $5.95 for $6 payout. Verify size."
+    }
+  ]
 }
