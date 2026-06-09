@@ -1,28 +1,28 @@
 {
-  "generated_unix": 1781041227,
+  "generated_unix": 1781041521,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
-      "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.965 < $1",
-      "edge_c": 2.6,
+      "key": "cs-no:KXITFMATCH-26JUN09AZACLA",
+      "summary": "Complete-set (NO) KXITFMATCH-26JUN09AZACLA: sum=0.985 < 1",
+      "edge_c": 1.5,
       "legs": [
         {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-RMCK",
-          "price_c": 91,
-          "url": "https://kalshi.com/markets/kxsenaterir"
+          "action": "BUY NO",
+          "ticker": "KXITFMATCH-26JUN09AZACLA-AZA",
+          "price_c": 95,
+          "url": "https://kalshi.com/markets/kxitfmatch"
         },
         {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-AWAT",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxsenaterir"
+          "action": "BUY NO",
+          "ticker": "KXITFMATCH-26JUN09AZACLA-CLA",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxitfmatch"
         }
       ],
-      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy NO on all 2 outcomes; net $0.99 for $1 payout. Verify size."
     }
   ]
 }
