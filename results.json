@@ -1,5 +1,58 @@
 {
-  "generated_unix": 1780968922,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780969230,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXUFCMOV-26JUN14TOPGAE",
+      "summary": "Complete-set (NO) KXUFCMOV-26JUN14TOPGAE: sum=5.972 < 6",
+      "edge_c": 2.8,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-TOPKOTKODQ",
+          "price_c": 35,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-TOPSUB",
+          "price_c": 84,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-TOPDEC",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-GAEKOTKODQ",
+          "price_c": 87,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-GAESUB",
+          "price_c": 99,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-GAEDEC",
+          "price_c": 96,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXUFCMOV-26JUN14TOPGAE-DRAWDRAW",
+          "price_c": 99,
+          "url": "https://kalshi.com/markets/kxufcmov"
+        }
+      ],
+      "detail": "Buy NO on all 7 outcomes; net $5.97 for $6 payout. Verify size."
+    }
+  ]
 }
