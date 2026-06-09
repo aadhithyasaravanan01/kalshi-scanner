@@ -1,5 +1,34 @@
 {
-  "generated_unix": 1780963823,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780964126,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXFIFAWGAME-26JUN09ISRSCO",
+      "summary": "Complete-set (NO) KXFIFAWGAME-26JUN09ISRSCO: sum=1.979 < 2",
+      "edge_c": 2.1,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN09ISRSCO-ISR",
+          "price_c": 95,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN09ISRSCO-SCO",
+          "price_c": 5,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXFIFAWGAME-26JUN09ISRSCO-TIE",
+          "price_c": 97,
+          "url": "https://kalshi.com/markets/kxfifawgame"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.98 for $2 payout. Verify size."
+    }
+  ]
 }
