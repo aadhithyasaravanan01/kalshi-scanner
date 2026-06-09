@@ -1,5 +1,56 @@
 {
-  "generated_unix": 1781040327,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781040625,
+  "count": 2,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.965 < $1",
+      "edge_c": 2.6,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXINTLFRIENDLYGAME-26JUN09TANRWA",
+      "summary": "Complete-set (NO) KXINTLFRIENDLYGAME-26JUN09TANRWA: sum=1.989 < 2",
+      "edge_c": 1.1,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN09TANRWA-TAN",
+          "price_c": 36,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN09TANRWA-RWA",
+          "price_c": 81,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXINTLFRIENDLYGAME-26JUN09TANRWA-TIE",
+          "price_c": 78,
+          "url": "https://kalshi.com/markets/kxintlfriendlygame"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.99 for $2 payout. Verify size."
+    }
+  ]
 }
