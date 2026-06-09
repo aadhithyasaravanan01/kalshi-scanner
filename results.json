@@ -1,5 +1,70 @@
 {
-  "generated_unix": 1780970430,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1780970723,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXVOTEPRIMARY-26JUN02KPOR",
+      "summary": "Complete-set (YES) KXVOTEPRIMARY-26JUN02KPOR: sum=0.960 < $1",
+      "edge_c": 2.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-2",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-6",
+          "price_c": 82,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-10",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-14",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-18",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-22",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-26",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-30",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVOTEPRIMARY-26JUN02KPOR-66",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxvoteprimary"
+        }
+      ],
+      "detail": "Buy YES on all 9 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
