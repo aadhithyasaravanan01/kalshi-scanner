@@ -1,28 +1,22 @@
 {
-  "generated_unix": 1781132438,
+  "generated_unix": 1781132724,
   "count": 2,
   "findings": [
     {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.964 < $1",
-      "edge_c": 2.7,
+      "scanner": "XRP",
+      "kind": "CENTER",
+      "key": "center:KXXRPD-26JUN1020:N",
+      "summary": "XRP ladder lagging spot 1.1 (center 1.1)",
+      "edge_c": -33.9,
       "legs": [
         {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-RMCK",
-          "price_c": 91,
-          "url": "https://kalshi.com/markets/kxsenaterir"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-AWAT",
-          "price_c": 5,
-          "url": "https://kalshi.com/markets/kxsenaterir"
+          "action": "BUY NO",
+          "ticker": "KXXRPD-26JUN1020-T1.0799",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxxrpd"
         }
       ],
-      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Whole ladder centered 1.1 vs spot 1.1 (+0.44 sigma). Best strike K=1: fair 60.6% vs market 94.5%."
     },
     {
       "scanner": "complete-set",
