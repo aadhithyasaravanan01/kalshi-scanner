@@ -1,5 +1,28 @@
 {
-  "generated_unix": 1781064030,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781064327,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWT20MATCH-26JUN092130JAPHON",
+      "summary": "Complete-set (YES) KXWT20MATCH-26JUN092130JAPHON: sum=0.960 < $1",
+      "edge_c": 2.6,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWT20MATCH-26JUN092130JAPHON-HON",
+          "price_c": 87,
+          "url": "https://kalshi.com/markets/kxwt20match"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWT20MATCH-26JUN092130JAPHON-JAP",
+          "price_c": 9,
+          "url": "https://kalshi.com/markets/kxwt20match"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
