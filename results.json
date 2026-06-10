@@ -1,18 +1,18 @@
 {
-  "generated_unix": 1781123725,
+  "generated_unix": 1781124028,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXTOPMODEL-26JUN13",
-      "summary": "Complete-set (YES) KXTOPMODEL-26JUN13: sum=0.970 < $1",
-      "edge_c": 1.4,
+      "summary": "Complete-set (YES) KXTOPMODEL-26JUN13: sum=0.960 < $1",
+      "edge_c": 2.3,
       "legs": [
         {
           "action": "BUY YES",
           "ticker": "KXTOPMODEL-26JUN13-CLAUT",
-          "price_c": 86,
+          "price_c": 85,
           "url": "https://kalshi.com/markets/kxtopmodel"
         },
         {
@@ -70,7 +70,7 @@
           "url": "https://kalshi.com/markets/kxtopmodel"
         }
       ],
-      "detail": "Buy YES on all 10 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy YES on all 10 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
