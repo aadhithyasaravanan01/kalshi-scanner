@@ -1,76 +1,106 @@
 {
-  "generated_unix": 1781118932,
+  "generated_unix": 1781119234,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
-      "key": "cs-yes:KXTOPMODEL-26JUN13",
-      "summary": "Complete-set (YES) KXTOPMODEL-26JUN13: sum=0.960 < $1",
-      "edge_c": 2.3,
+      "key": "cs-yes:KXSPOTIFYW-26JUN11",
+      "summary": "Complete-set (YES) KXSPOTIFYW-26JUN11: sum=0.950 < $1",
+      "edge_c": 1.0,
       "legs": [
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-CLAUT",
-          "price_c": 85,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "ticker": "KXSPOTIFYW-26JUN11-HAT",
+          "price_c": 14,
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-CLAU",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "ticker": "KXSPOTIFYW-26JUN11-CHO",
+          "price_c": 60,
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-GEMI",
+          "ticker": "KXSPOTIFYW-26JUN11-JAN",
+          "price_c": 5,
+          "url": "https://kalshi.com/markets/kxspotifyw"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSPOTIFYW-26JUN11-THE",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-CLAUT7",
+          "ticker": "KXSPOTIFYW-26JUN11-EAR",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-CLAU7",
+          "ticker": "KXSPOTIFYW-26JUN11-BIL",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-GEMI3",
+          "ticker": "KXSPOTIFYW-26JUN11-BEH",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-MUSE",
+          "ticker": "KXSPOTIFYW-26JUN11-CHI",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-GPT",
+          "ticker": "KXSPOTIFYW-26JUN11-BAB",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-ERNIE",
+          "ticker": "KXSPOTIFYW-26JUN11-SHA",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXTOPMODEL-26JUN13-QWEN",
+          "ticker": "KXSPOTIFYW-26JUN11-MRB",
           "price_c": 1,
-          "url": "https://kalshi.com/markets/kxtopmodel"
+          "url": "https://kalshi.com/markets/kxspotifyw"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSPOTIFYW-26JUN11-NAT",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxspotifyw"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSPOTIFYW-26JUN11-BEA",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxspotifyw"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSPOTIFYW-26JUN11-WHI",
+          "price_c": 5,
+          "url": "https://kalshi.com/markets/kxspotifyw"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXSPOTIFYW-26JUN11-DRO",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxspotifyw"
         }
       ],
-      "detail": "Buy YES on all 10 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy YES on all 15 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
