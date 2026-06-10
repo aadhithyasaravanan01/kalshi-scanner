@@ -1,28 +1,22 @@
 {
-  "generated_unix": 1781094326,
+  "generated_unix": 1781094626,
   "count": 1,
   "findings": [
     {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.966 < $1",
-      "edge_c": 2.5,
+      "scanner": "silver",
+      "kind": "CENTER",
+      "key": "center:KXSILVERD-26JUN1017:Y",
+      "summary": "silver ladder lagging spot 64.5 (center 64.0)",
+      "edge_c": 13.5,
       "legs": [
         {
           "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-RMCK",
-          "price_c": 91,
-          "url": "https://kalshi.com/markets/kxsenaterir"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXSENATERIR-26-AWAT",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxsenaterir"
+          "ticker": "KXSILVERD-26JUN1017-T63.75",
+          "price_c": 53,
+          "url": "https://kalshi.com/markets/kxsilverd"
         }
       ],
-      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Whole ladder centered 64.0 vs spot 64.5 (-0.30 sigma). Best strike K=64: fair 66.0% vs market 52.5%."
     }
   ]
 }
