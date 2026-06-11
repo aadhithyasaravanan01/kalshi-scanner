@@ -1,5 +1,66 @@
 {
-  "generated_unix": 1781140527,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781140856,
+  "count": 3,
+  "findings": [
+    {
+      "scanner": "SOL",
+      "kind": "CENTER",
+      "key": "center:KXSOLD-26JUN1117:N",
+      "summary": "SOL ladder lagging spot 64.3 (center 70.3)",
+      "edge_c": -28.4,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSOLD-26JUN1117-T62.9999",
+          "price_c": 21,
+          "url": "https://kalshi.com/markets/kxsold"
+        }
+      ],
+      "detail": "Whole ladder centered 70.3 vs spot 64.3 (+0.32 sigma). Best strike K=63: fair 52.6% vs market 81.0%."
+    },
+    {
+      "scanner": "gold",
+      "kind": "LOCK",
+      "key": "lock:KXGOLDD-26JUN1117-T4074:KXGOLDD-26JUN1117-T4084",
+      "summary": "Nesting lock: KXGOLDD-26JUN1117-T4074 \u2287 KXGOLDD-26JUN1117-T4084",
+      "edge_c": 4.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOLDD-26JUN1117-T4074",
+          "price_c": 47,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXGOLDD-26JUN1117-T4084",
+          "price_c": 49,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        }
+      ],
+      "detail": "Guaranteed \u2265$1 payout for $0.96. Verify size before trading."
+    },
+    {
+      "scanner": "gold",
+      "kind": "LOCK",
+      "key": "lock:KXGOLDD-26JUN1117-T4074:KXGOLDD-26JUN1117-T4094",
+      "summary": "Nesting lock: KXGOLDD-26JUN1117-T4074 \u2287 KXGOLDD-26JUN1117-T4094",
+      "edge_c": 2.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOLDD-26JUN1117-T4074",
+          "price_c": 47,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXGOLDD-26JUN1117-T4094",
+          "price_c": 51,
+          "url": "https://kalshi.com/markets/kxgoldd"
+        }
+      ],
+      "detail": "Guaranteed \u2265$1 payout for $0.98. Verify size before trading."
+    }
+  ]
 }
