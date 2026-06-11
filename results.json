@@ -1,5 +1,34 @@
 {
-  "generated_unix": 1781200228,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781200527,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXMLBF5-26JUN111310STLNYM",
+      "summary": "Complete-set (NO) KXMLBF5-26JUN111310STLNYM: sum=1.986 < 2",
+      "edge_c": 1.4,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXMLBF5-26JUN111310STLNYM-STL",
+          "price_c": 32,
+          "url": "https://kalshi.com/markets/kxmlbf5"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMLBF5-26JUN111310STLNYM-NYM",
+          "price_c": 77,
+          "url": "https://kalshi.com/markets/kxmlbf5"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMLBF5-26JUN111310STLNYM-TIE",
+          "price_c": 86,
+          "url": "https://kalshi.com/markets/kxmlbf5"
+        }
+      ],
+      "detail": "Buy NO on all 3 outcomes; net $1.99 for $2 payout. Verify size."
+    }
+  ]
 }
