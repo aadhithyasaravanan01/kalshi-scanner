@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1781221224,
+  "generated_unix": 1781221527,
   "count": 2,
   "findings": [
     {
@@ -27,30 +27,42 @@
     {
       "scanner": "complete-set",
       "kind": "LOCK",
-      "key": "cs-yes:KXWCFTTS-26JUN12USAPAR",
-      "summary": "Complete-set (YES) KXWCFTTS-26JUN12USAPAR: sum=0.950 < $1",
-      "edge_c": 1.3,
+      "key": "cs-yes:KXCYTISINICLINE-26",
+      "summary": "Complete-set (YES) KXCYTISINICLINE-26: sum=0.960 < $1",
+      "edge_c": 1.4,
       "legs": [
         {
           "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN12USAPAR-USA",
-          "price_c": 56,
-          "url": "https://kalshi.com/markets/kxwcftts"
+          "ticker": "KXCYTISINICLINE-26-FA",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
         },
         {
           "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN12USAPAR-PAR",
-          "price_c": 32,
-          "url": "https://kalshi.com/markets/kxwcftts"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN12USAPAR-NONE",
+          "ticker": "KXCYTISINICLINE-26-CA",
           "price_c": 7,
-          "url": "https://kalshi.com/markets/kxwcftts"
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-DN",
+          "price_c": 76,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-WS",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-ND",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
         }
       ],
-      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy YES on all 5 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
