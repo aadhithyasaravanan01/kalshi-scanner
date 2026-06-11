@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781220929,
-  "count": 1,
+  "generated_unix": 1781221224,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWCFTTS-26JUN12USAPAR",
+      "summary": "Complete-set (YES) KXWCFTTS-26JUN12USAPAR: sum=0.950 < $1",
+      "edge_c": 1.3,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN12USAPAR-USA",
+          "price_c": 56,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN12USAPAR-PAR",
+          "price_c": 32,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN12USAPAR-NONE",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
