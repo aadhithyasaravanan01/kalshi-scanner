@@ -1,5 +1,64 @@
 {
-  "generated_unix": 1781159428,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781159731,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXAPRPOTUS-26JUN12",
+      "summary": "Complete-set (NO) KXAPRPOTUS-26JUN12: sum=6.988 < 7",
+      "edge_c": 1.2,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-39.0",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-39.1",
+          "price_c": 98,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-39.4",
+          "price_c": 97,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-39.7",
+          "price_c": 98,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-40.0",
+          "price_c": 66,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-40.3",
+          "price_c": 51,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-40.6",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXAPRPOTUS-26JUN12-40.7",
+          "price_c": 98,
+          "url": "https://kalshi.com/markets/kxaprpotus"
+        }
+      ],
+      "detail": "Buy NO on all 8 outcomes; net $6.99 for $7 payout. Verify size."
+    }
+  ]
 }
