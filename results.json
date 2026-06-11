@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781159731,
-  "count": 1,
+  "generated_unix": 1781160032,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -59,6 +59,58 @@
         }
       ],
       "detail": "Buy NO on all 8 outcomes; net $6.99 for $7 payout. Verify size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXMATHAI-26JUN30",
+      "summary": "Complete-set (NO) KXMATHAI-26JUN30: sum=5.990 < 6",
+      "edge_c": 1.0,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-CLAU",
+          "price_c": 61,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-CHAT",
+          "price_c": 96,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-GEMI",
+          "price_c": 43,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-QWEN",
+          "price_c": 98,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-KIMI",
+          "price_c": 99,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-MIMO",
+          "price_c": 99,
+          "url": "https://kalshi.com/markets/kxmathai"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXMATHAI-26JUN30-MINI",
+          "price_c": 99,
+          "url": "https://kalshi.com/markets/kxmathai"
+        }
+      ],
+      "detail": "Buy NO on all 7 outcomes; net $5.99 for $6 payout. Verify size."
     }
   ]
 }
