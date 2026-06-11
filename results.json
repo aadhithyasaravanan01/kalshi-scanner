@@ -1,7 +1,77 @@
 {
-  "generated_unix": 1781218837,
-  "count": 1,
+  "generated_unix": 1781219126,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXTOPMODEL-26JUN13",
+      "summary": "Complete-set (YES) KXTOPMODEL-26JUN13: sum=0.950 < $1",
+      "edge_c": 3.4,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-CLAUT",
+          "price_c": 85,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-CLAU",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-GEMI",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-CLAUT7",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-CLAU7",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-GEMI3",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-MUSE",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-GPT",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-ERNIE",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXTOPMODEL-26JUN13-QWEN",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxtopmodel"
+        }
+      ],
+      "detail": "Buy YES on all 10 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
