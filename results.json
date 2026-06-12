@@ -1,7 +1,29 @@
 {
-  "generated_unix": 1781274025,
-  "count": 2,
+  "generated_unix": 1781274324,
+  "count": 3,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWTAMATCH-26JUN11DARRAK",
+      "summary": "Complete-set (YES) KXWTAMATCH-26JUN11DARRAK: sum=0.950 < $1",
+      "edge_c": 4.5,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWTAMATCH-26JUN11DARRAK-DAR",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxwtamatch"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWTAMATCH-26JUN11DARRAK-RAK",
+          "price_c": 94,
+          "url": "https://kalshi.com/markets/kxwtamatch"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.95 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
