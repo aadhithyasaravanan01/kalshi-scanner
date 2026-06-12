@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781256925,
-  "count": 3,
+  "generated_unix": 1781257227,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -51,28 +51,6 @@
         }
       ],
       "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXITFMATCH-26JUN12BAKIVA",
-      "summary": "Complete-set (YES) KXITFMATCH-26JUN12BAKIVA: sum=0.980 < $1",
-      "edge_c": 1.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXITFMATCH-26JUN12BAKIVA-BAK",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxitfmatch"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXITFMATCH-26JUN12BAKIVA-IVA",
-          "price_c": 92,
-          "url": "https://kalshi.com/markets/kxitfmatch"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
