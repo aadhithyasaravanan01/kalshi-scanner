@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781275527,
-  "count": 2,
+  "generated_unix": 1781275834,
+  "count": 3,
   "findings": [
     {
       "scanner": "complete-set",
@@ -51,6 +51,52 @@
         }
       ],
       "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXHIGHMIA-26JUN12",
+      "summary": "Complete-set (YES) KXHIGHMIA-26JUN12: sum=0.950 < $1",
+      "edge_c": 1.1,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-T86",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-B86.5",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-B88.5",
+          "price_c": 12,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-B90.5",
+          "price_c": 58,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-B92.5",
+          "price_c": 20,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHIGHMIA-26JUN12-T93",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxhighmia"
+        }
+      ],
+      "detail": "Buy YES on all 6 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
