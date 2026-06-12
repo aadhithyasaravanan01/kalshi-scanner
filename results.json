@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781223923,
-  "count": 4,
+  "generated_unix": 1781224229,
+  "count": 5,
   "findings": [
     {
       "scanner": "complete-set",
@@ -47,6 +47,34 @@
           "action": "BUY YES",
           "ticker": "KXWCFTTS-26JUN14AUSTUR-NONE",
           "price_c": 5,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWCFTTS-26JUN13BRAMAR",
+      "summary": "Complete-set (YES) KXWCFTTS-26JUN13BRAMAR: sum=0.950 < $1",
+      "edge_c": 1.6,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN13BRAMAR-BRA",
+          "price_c": 62,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN13BRAMAR-MAR",
+          "price_c": 27,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN13BRAMAR-NONE",
+          "price_c": 6,
           "url": "https://kalshi.com/markets/kxwcftts"
         }
       ],
