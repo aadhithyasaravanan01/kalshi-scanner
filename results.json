@@ -1,7 +1,29 @@
 {
-  "generated_unix": 1781296231,
-  "count": 1,
+  "generated_unix": 1781296506,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXNBAH2HPTS-26JUN13LKORNET7JALVARADO5",
+      "summary": "Complete-set (YES) KXNBAH2HPTS-26JUN13LKORNET7JALVARADO5: sum=0.950 < $1",
+      "edge_c": 1.8,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXNBAH2HPTS-26JUN13LKORNET7JALVARADO5-LKORNET7",
+          "price_c": 34,
+          "url": "https://kalshi.com/markets/kxnbah2hpts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXNBAH2HPTS-26JUN13LKORNET7JALVARADO5-JALVARADO5",
+          "price_c": 61,
+          "url": "https://kalshi.com/markets/kxnbah2hpts"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
