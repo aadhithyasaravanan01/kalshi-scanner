@@ -1,29 +1,7 @@
 {
-  "generated_unix": 1781301032,
-  "count": 2,
+  "generated_unix": 1781301328,
+  "count": 1,
   "findings": [
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-no:KXCOUNTYCHAMPMATCH-26JUN120600GLASUS",
-      "summary": "Complete-set (NO) KXCOUNTYCHAMPMATCH-26JUN120600GLASUS: sum=0.982 < 1",
-      "edge_c": 1.8,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXCOUNTYCHAMPMATCH-26JUN120600GLASUS-SUS",
-          "price_c": 8,
-          "url": "https://kalshi.com/markets/kxcountychampmatch"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXCOUNTYCHAMPMATCH-26JUN120600GLASUS-GLA",
-          "price_c": 89,
-          "url": "https://kalshi.com/markets/kxcountychampmatch"
-        }
-      ],
-      "detail": "Buy NO on all 2 outcomes; net $0.98 for $1 payout. Verify size."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
