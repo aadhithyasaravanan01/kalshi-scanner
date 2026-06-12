@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781232324,
-  "count": 2,
+  "generated_unix": 1781232628,
+  "count": 3,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,46 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXCYTISINICLINE-26",
+      "summary": "Complete-set (YES) KXCYTISINICLINE-26: sum=0.960 < $1",
+      "edge_c": 1.4,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-FA",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-CA",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-DN",
+          "price_c": 76,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-WS",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCYTISINICLINE-26-ND",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxcytisinicline"
+        }
+      ],
+      "detail": "Buy YES on all 5 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     },
     {
       "scanner": "complete-set",
