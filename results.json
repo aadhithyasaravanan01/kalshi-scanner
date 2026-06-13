@@ -1,7 +1,35 @@
 {
-  "generated_unix": 1781342131,
-  "count": 1,
+  "generated_unix": 1781342430,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWCFTTS-26JUN16FRASEN",
+      "summary": "Complete-set (YES) KXWCFTTS-26JUN16FRASEN: sum=0.950 < $1",
+      "edge_c": 1.4,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN16FRASEN-FRA",
+          "price_c": 60,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN16FRASEN-SEN",
+          "price_c": 26,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN16FRASEN-NONE",
+          "price_c": 9,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
