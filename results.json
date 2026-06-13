@@ -1,35 +1,7 @@
 {
-  "generated_unix": 1781318429,
-  "count": 2,
+  "generated_unix": 1781318729,
+  "count": 1,
   "findings": [
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-no:KXWCBESTHOST-26",
-      "summary": "Complete-set (NO) KXWCBESTHOST-26: sum=1.984 < 2",
-      "edge_c": 1.6,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXWCBESTHOST-26-USA",
-          "price_c": 36,
-          "url": "https://kalshi.com/markets/kxwcbesthost"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXWCBESTHOST-26-CAN",
-          "price_c": 99,
-          "url": "https://kalshi.com/markets/kxwcbesthost"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXWCBESTHOST-26-MEX",
-          "price_c": 60,
-          "url": "https://kalshi.com/markets/kxwcbesthost"
-        }
-      ],
-      "detail": "Buy NO on all 3 outcomes; net $1.98 for $2 payout. Verify size."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
