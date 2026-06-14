@@ -1,38 +1,28 @@
 {
-  "generated_unix": 1781474443,
-  "count": 2,
+  "generated_unix": 1781474729,
+  "count": 1,
   "findings": [
     {
-      "scanner": "gold",
-      "kind": "CENTER",
-      "key": "center:KXGOLDD-26JUN1517:N",
-      "summary": "gold ladder lagging spot 4226.6 (center 4267.2)",
-      "edge_c": -26.7,
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXSENATERIR-26",
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.966 < $1",
+      "edge_c": 2.5,
       "legs": [
         {
-          "action": "BUY NO",
-          "ticker": "KXGOLDD-26JUN1517-T4227",
-          "price_c": 24,
-          "url": "https://kalshi.com/markets/kxgoldd"
-        }
-      ],
-      "detail": "Whole ladder centered 4267.2 vs spot 4226.6 (+0.48 sigma). Best strike K=4227: fair 49.8% vs market 76.5%."
-    },
-    {
-      "scanner": "silver",
-      "kind": "CENTER",
-      "key": "center:KXSILVERD-26JUN1517:N",
-      "summary": "silver ladder lagging spot 68.0 (center 69.1)",
-      "edge_c": -16.9,
-      "legs": [
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-RMCK",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxsenaterir"
+        },
         {
-          "action": "BUY NO",
-          "ticker": "KXSILVERD-26JUN1517-T66.25",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxsilverd"
+          "action": "BUY YES",
+          "ticker": "KXSENATERIR-26-AWAT",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxsenaterir"
         }
       ],
-      "detail": "Whole ladder centered 69.1 vs spot 68.0 (+0.40 sigma). Best strike K=66: fair 74.1% vs market 91.0%."
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
