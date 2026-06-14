@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1781403928,
+  "generated_unix": 1781404238,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXCALIEUTENANTGOV-26NOV03",
-      "summary": "Complete-set (YES) KXCALIEUTENANTGOV-26NOV03: sum=0.971 < $1",
-      "edge_c": 1.9,
+      "summary": "Complete-set (YES) KXCALIEUTENANTGOV-26NOV03: sum=0.964 < $1",
+      "edge_c": 2.5,
       "legs": [
         {
           "action": "BUY YES",
@@ -24,7 +24,7 @@
         {
           "action": "BUY YES",
           "ticker": "KXCALIEUTENANTGOV-26NOV03-FMA",
-          "price_c": 91,
+          "price_c": 90,
           "url": "https://kalshi.com/markets/kxcalieutenantgov"
         },
         {
@@ -64,7 +64,7 @@
           "url": "https://kalshi.com/markets/kxcalieutenantgov"
         }
       ],
-      "detail": "Buy YES on all 9 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+      "detail": "Buy YES on all 9 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
