@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781458531,
-  "count": 1,
+  "generated_unix": 1781458816,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWC1H-26JUN14GERCUW",
+      "summary": "Complete-set (YES) KXWC1H-26JUN14GERCUW: sum=0.980 < $1",
+      "edge_c": 1.2,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWC1H-26JUN14GERCUW-GER",
+          "price_c": 93,
+          "url": "https://kalshi.com/markets/kxwc1h"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWC1H-26JUN14GERCUW-CUW",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxwc1h"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWC1H-26JUN14GERCUW-TIE",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxwc1h"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
