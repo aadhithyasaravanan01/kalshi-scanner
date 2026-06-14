@@ -1,5 +1,70 @@
 {
-  "generated_unix": 1781423443,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781423729,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXCALIEUTENANTGOV-26NOV03",
+      "summary": "Complete-set (YES) KXCALIEUTENANTGOV-26NOV03: sum=0.963 < $1",
+      "edge_c": 2.6,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-JFRY",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-JKEL",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-FMA",
+          "price_c": 90,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-OMA",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-TMYE",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-MTUB",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-DFEN",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-GROM",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCALIEUTENANTGOV-26NOV03-BDAH",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxcalieutenantgov"
+        }
+      ],
+      "detail": "Buy YES on all 9 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
