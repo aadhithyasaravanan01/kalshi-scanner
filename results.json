@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781431825,
-  "count": 2,
+  "generated_unix": 1781432140,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -65,40 +65,6 @@
         }
       ],
       "detail": "Buy YES on all 9 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXWCGROUPBOTTOM-26D",
-      "summary": "Complete-set (YES) KXWCGROUPBOTTOM-26D: sum=0.950 < $1",
-      "edge_c": 1.2,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCGROUPBOTTOM-26D-USA",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwcgroupbottom"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCGROUPBOTTOM-26D-AUS",
-          "price_c": 7,
-          "url": "https://kalshi.com/markets/kxwcgroupbottom"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCGROUPBOTTOM-26D-PAR",
-          "price_c": 55,
-          "url": "https://kalshi.com/markets/kxwcgroupbottom"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCGROUPBOTTOM-26D-TUR",
-          "price_c": 32,
-          "url": "https://kalshi.com/markets/kxwcgroupbottom"
-        }
-      ],
-      "detail": "Buy YES on all 4 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
