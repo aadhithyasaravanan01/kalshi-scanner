@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1781457924,
-  "count": 2,
+  "generated_unix": 1781458239,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.966 < $1",
-      "edge_c": 2.5,
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.963 < $1",
+      "edge_c": 2.8,
       "legs": [
         {
           "action": "BUY YES",
@@ -18,39 +18,11 @@
         {
           "action": "BUY YES",
           "ticker": "KXSENATERIR-26-AWAT",
-          "price_c": 6,
+          "price_c": 5,
           "url": "https://kalshi.com/markets/kxsenaterir"
         }
       ],
-      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-no:KXWC1H-26JUN14GERCUW",
-      "summary": "Complete-set (NO) KXWC1H-26JUN14GERCUW: sum=1.983 < 2",
-      "edge_c": 1.7,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXWC1H-26JUN14GERCUW-GER",
-          "price_c": 33,
-          "url": "https://kalshi.com/markets/kxwc1h"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXWC1H-26JUN14GERCUW-CUW",
-          "price_c": 97,
-          "url": "https://kalshi.com/markets/kxwc1h"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXWC1H-26JUN14GERCUW-TIE",
-          "price_c": 65,
-          "url": "https://kalshi.com/markets/kxwc1h"
-        }
-      ],
-      "detail": "Buy NO on all 3 outcomes; net $1.98 for $2 payout. Verify size."
+      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
