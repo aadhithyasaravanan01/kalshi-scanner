@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781459432,
-  "count": 1,
+  "generated_unix": 1781459725,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXWCFTTS-26JUN17UZBCOL",
+      "summary": "Complete-set (YES) KXWCFTTS-26JUN17UZBCOL: sum=0.960 < $1",
+      "edge_c": 1.0,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN17UZBCOL-UZB",
+          "price_c": 20,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN17UZBCOL-COL",
+          "price_c": 70,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXWCFTTS-26JUN17UZBCOL-NONE",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxwcftts"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
