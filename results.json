@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781449237,
-  "count": 2,
+  "generated_unix": 1781449528,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,34 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXTAKEOVERACQWB-27JUN30",
-      "summary": "Complete-set (YES) KXTAKEOVERACQWB-27JUN30: sum=0.970 < $1",
-      "edge_c": 1.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-NFLX",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-PSKY",
-          "price_c": 83,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-NONE",
-          "price_c": 11,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        }
-      ],
-      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
