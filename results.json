@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1781405729,
+  "generated_unix": 1781406033,
   "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXCALIEUTENANTGOV-26NOV03",
-      "summary": "Complete-set (YES) KXCALIEUTENANTGOV-26NOV03: sum=0.964 < $1",
-      "edge_c": 2.5,
+      "summary": "Complete-set (YES) KXCALIEUTENANTGOV-26NOV03: sum=0.963 < $1",
+      "edge_c": 2.6,
       "legs": [
         {
           "action": "BUY YES",
