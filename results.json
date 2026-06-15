@@ -1,22 +1,5 @@
 {
-  "generated_unix": 1781556933,
-  "count": 1,
-  "findings": [
-    {
-      "scanner": "silver",
-      "kind": "CENTER",
-      "key": "center:KXSILVERD-26JUN1517:Y",
-      "summary": "silver ladder lagging spot 70.0 (center 68.5)",
-      "edge_c": 18.0,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXSILVERD-26JUN1517-T70",
-          "price_c": 33,
-          "url": "https://kalshi.com/markets/kxsilverd"
-        }
-      ],
-      "detail": "Whole ladder centered 68.5 vs spot 70.0 (-0.44 sigma). Best strike K=70: fair 49.5% vs market 31.5%."
-    }
-  ]
+  "generated_unix": 1781557238,
+  "count": 0,
+  "findings": []
 }
