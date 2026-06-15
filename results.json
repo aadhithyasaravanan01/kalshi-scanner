@@ -1,35 +1,7 @@
 {
-  "generated_unix": 1781486728,
+  "generated_unix": 1781487036,
   "count": 2,
   "findings": [
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXLAPRIMARY-04R26",
-      "summary": "Complete-set (YES) KXLAPRIMARY-04R26: sum=0.959 < $1",
-      "edge_c": 3.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXLAPRIMARY-04R26-MJOH",
-          "price_c": 90,
-          "url": "https://kalshi.com/markets/kxlaprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXLAPRIMARY-04R26-JMOR",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxlaprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXLAPRIMARY-04R26-MNIC",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxlaprimary"
-        }
-      ],
-      "detail": "Buy YES on all 3 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
@@ -51,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXLAPRIMARY-04R26",
+      "summary": "Complete-set (YES) KXLAPRIMARY-04R26: sum=0.967 < $1",
+      "edge_c": 2.3,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXLAPRIMARY-04R26-MJOH",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxlaprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXLAPRIMARY-04R26-JMOR",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxlaprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXLAPRIMARY-04R26-MNIC",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxlaprimary"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
