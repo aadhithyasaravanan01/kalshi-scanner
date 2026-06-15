@@ -1,7 +1,29 @@
 {
-  "generated_unix": 1781489432,
-  "count": 1,
+  "generated_unix": 1781489733,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-no:KXITFMATCH-26JUN14HAZMAC",
+      "summary": "Complete-set (NO) KXITFMATCH-26JUN14HAZMAC: sum=0.969 < 1",
+      "edge_c": 3.1,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXITFMATCH-26JUN14HAZMAC-HAZ",
+          "price_c": 5,
+          "url": "https://kalshi.com/markets/kxitfmatch"
+        },
+        {
+          "action": "BUY NO",
+          "ticker": "KXITFMATCH-26JUN14HAZMAC-MAC",
+          "price_c": 91,
+          "url": "https://kalshi.com/markets/kxitfmatch"
+        }
+      ],
+      "detail": "Buy NO on all 2 outcomes; net $0.97 for $1 payout. Verify size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
