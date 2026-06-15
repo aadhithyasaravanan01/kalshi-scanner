@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781490031,
-  "count": 2,
+  "generated_unix": 1781490324,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,34 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXWCFTTS-26JUN18MEXKOR",
-      "summary": "Complete-set (YES) KXWCFTTS-26JUN18MEXKOR: sum=0.950 < $1",
-      "edge_c": 1.0,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN18MEXKOR-MEX",
-          "price_c": 51,
-          "url": "https://kalshi.com/markets/kxwcftts"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN18MEXKOR-KOR",
-          "price_c": 34,
-          "url": "https://kalshi.com/markets/kxwcftts"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWCFTTS-26JUN18MEXKOR-NONE",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxwcftts"
-        }
-      ],
-      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
