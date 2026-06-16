@@ -1,5 +1,28 @@
 {
-  "generated_unix": 1781648436,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781648707,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXHOUSERACE-FL10-26",
+      "summary": "Complete-set (YES) KXHOUSERACE-FL10-26: sum=0.972 < $1",
+      "edge_c": 2.3,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXHOUSERACE-FL10-26-D",
+          "price_c": 95,
+          "url": "https://kalshi.com/markets/kxhouserace"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHOUSERACE-FL10-26-R",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxhouserace"
+        }
+      ],
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
