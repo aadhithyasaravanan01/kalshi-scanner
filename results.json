@@ -1,28 +1,5 @@
 {
-  "generated_unix": 1781637933,
-  "count": 1,
-  "findings": [
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXUTPRIMARY-02R26",
-      "summary": "Complete-set (YES) KXUTPRIMARY-02R26: sum=0.980 < $1",
-      "edge_c": 1.5,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXUTPRIMARY-02R26-BMOO",
-          "price_c": 95,
-          "url": "https://kalshi.com/markets/kxutprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXUTPRIMARY-02R26-KLIS",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxutprimary"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    }
-  ]
+  "generated_unix": 1781638267,
+  "count": 0,
+  "findings": []
 }
