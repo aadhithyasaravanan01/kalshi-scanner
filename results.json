@@ -1,28 +1,5 @@
 {
-  "generated_unix": 1781622053,
-  "count": 1,
-  "findings": [
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXMD06D-26",
-      "summary": "Complete-set (YES) KXMD06D-26: sum=0.960 < $1",
-      "edge_c": 2.5,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXMD06D-26-ADEL",
-          "price_c": 86,
-          "url": "https://kalshi.com/markets/kxmd06d"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMD06D-26-DTRO",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxmd06d"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    }
-  ]
+  "generated_unix": 1781622344,
+  "count": 0,
+  "findings": []
 }
