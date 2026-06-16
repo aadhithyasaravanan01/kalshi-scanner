@@ -1,5 +1,34 @@
 {
-  "generated_unix": 1781583932,
-  "count": 0,
-  "findings": []
+  "generated_unix": 1781584232,
+  "count": 1,
+  "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXNY8D-26",
+      "summary": "Complete-set (YES) KXNY8D-26: sum=0.956 < $1",
+      "edge_c": 3.2,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXNY8D-26-HJEF",
+          "price_c": 88,
+          "url": "https://kalshi.com/markets/kxny8d"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXNY8D-26-COSS",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxny8d"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXNY8D-26-VBOS",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxny8d"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    }
+  ]
 }
