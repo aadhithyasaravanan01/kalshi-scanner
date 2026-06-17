@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781729436,
-  "count": 2,
+  "generated_unix": 1781729736,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,88 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXWC1HSCORE-26JUN17ENGCRO",
-      "summary": "Complete-set (YES) KXWC1HSCORE-26JUN17ENGCRO: sum=0.960 < $1",
-      "edge_c": 1.9,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG0CRO0",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG0CRO1",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG0CRO2",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG0CRO3",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG1CRO0",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG1CRO1",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG1CRO2",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG2CRO0",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG2CRO1",
-          "price_c": 5,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG2CRO2",
-          "price_c": 81,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG3CRO0",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWC1HSCORE-26JUN17ENGCRO-ENG3CRO1",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxwc1hscore"
-        }
-      ],
-      "detail": "Buy YES on all 12 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
