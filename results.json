@@ -1,23 +1,7 @@
 {
-  "generated_unix": 1781720131,
-  "count": 2,
+  "generated_unix": 1781720435,
+  "count": 1,
   "findings": [
-    {
-      "scanner": "gold",
-      "kind": "CENTER",
-      "key": "center:KXGOLDD-26JUN1717:Y",
-      "summary": "gold ladder lagging spot 4287.7 (center 4278.4)",
-      "edge_c": 12.8,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXGOLDD-26JUN1717-T4272",
-          "price_c": 57,
-          "url": "https://kalshi.com/markets/kxgoldd"
-        }
-      ],
-      "detail": "Whole ladder centered 4278.4 vs spot 4287.7 (-0.27 sigma). Best strike K=4272: fair 67.8% vs market 55.0%."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
