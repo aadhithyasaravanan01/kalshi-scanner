@@ -1,7 +1,23 @@
 {
-  "generated_unix": 1781728834,
-  "count": 1,
+  "generated_unix": 1781729140,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "silver",
+      "kind": "CENTER",
+      "key": "center:KXSILVERD-26JUN1717:N",
+      "summary": "silver ladder lagging spot 68.0 (center 69.8)",
+      "edge_c": -38.6,
+      "legs": [
+        {
+          "action": "BUY NO",
+          "ticker": "KXSILVERD-26JUN1717-T67.75",
+          "price_c": 8,
+          "url": "https://kalshi.com/markets/kxsilverd"
+        }
+      ],
+      "detail": "Whole ladder centered 69.8 vs spot 68.0 (+0.64 sigma). Best strike K=68: fair 54.4% vs market 93.0%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
