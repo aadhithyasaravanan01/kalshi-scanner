@@ -1,39 +1,7 @@
 {
-  "generated_unix": 1781724645,
-  "count": 3,
+  "generated_unix": 1781724939,
+  "count": 1,
   "findings": [
-    {
-      "scanner": "silver",
-      "kind": "CENTER",
-      "key": "center:KXSILVERD-26JUN1717:N",
-      "summary": "silver ladder lagging spot 67.3 (center 67.6)",
-      "edge_c": -15.2,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXSILVERD-26JUN1717-T67.25",
-          "price_c": 30,
-          "url": "https://kalshi.com/markets/kxsilverd"
-        }
-      ],
-      "detail": "Whole ladder centered 67.6 vs spot 67.3 (+0.39 sigma). Best strike K=67: fair 55.3% vs market 70.5%."
-    },
-    {
-      "scanner": "gold",
-      "kind": "CENTER",
-      "key": "center:KXGOLDD-26JUN1717:N",
-      "summary": "gold ladder lagging spot 4222.4 (center 4228.0)",
-      "edge_c": -14.7,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXGOLDD-26JUN1717-T4232",
-          "price_c": 54,
-          "url": "https://kalshi.com/markets/kxgoldd"
-        }
-      ],
-      "detail": "Whole ladder centered 4228.0 vs spot 4222.4 (+0.28 sigma). Best strike K=4232: fair 31.8% vs market 46.5%."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
