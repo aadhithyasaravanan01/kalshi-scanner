@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781655037,
-  "count": 2,
+  "generated_unix": 1781655335,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,46 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXCBDECISIONAUSTRALIA-26AUG11",
-      "summary": "Complete-set (YES) KXCBDECISIONAUSTRALIA-26AUG11: sum=0.950 < $1",
-      "edge_c": 1.7,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONAUSTRALIA-26AUG11-C25P",
-          "price_c": 5,
-          "url": "https://kalshi.com/markets/kxcbdecisionaustralia"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONAUSTRALIA-26AUG11-C25",
-          "price_c": 8,
-          "url": "https://kalshi.com/markets/kxcbdecisionaustralia"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONAUSTRALIA-26AUG11-HOLD",
-          "price_c": 68,
-          "url": "https://kalshi.com/markets/kxcbdecisionaustralia"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONAUSTRALIA-26AUG11-H25",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxcbdecisionaustralia"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONAUSTRALIA-26AUG11-H25P",
-          "price_c": 8,
-          "url": "https://kalshi.com/markets/kxcbdecisionaustralia"
-        }
-      ],
-      "detail": "Buy YES on all 5 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
