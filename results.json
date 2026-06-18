@@ -1,7 +1,71 @@
 {
-  "generated_unix": 1781753125,
-  "count": 1,
+  "generated_unix": 1781753438,
+  "count": 2,
   "findings": [
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXGOVMDNOMR-26",
+      "summary": "Complete-set (YES) KXGOVMDNOMR-26: sum=0.957 < $1",
+      "edge_c": 2.6,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-SHER",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-CBOU",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-LHOG",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-DCOX",
+          "price_c": 84,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-EHAL",
+          "price_c": 11,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-KWED",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-JMYR",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-CBRU",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXGOVMDNOMR-26-BEHR",
+          "price_c": 0,
+          "url": "https://kalshi.com/markets/kxgovmdnomr"
+        }
+      ],
+      "detail": "Buy YES on all 9 outcomes; net $0.97 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
