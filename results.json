@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781900548,
-  "count": 4,
+  "generated_unix": 1781905145,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -45,74 +45,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXTAKEOVERACQWB-27JUN30",
-      "summary": "Complete-set (YES) KXTAKEOVERACQWB-27JUN30: sum=0.960 < $1",
-      "edge_c": 2.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-NFLX",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-PSKY",
-          "price_c": 82,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXTAKEOVERACQWB-27JUN30-NONE",
-          "price_c": 11,
-          "url": "https://kalshi.com/markets/kxtakeoveracqwb"
-        }
-      ],
-      "detail": "Buy YES on all 3 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXMIPRIMARY-13R26",
-      "summary": "Complete-set (YES) KXMIPRIMARY-13R26: sum=0.960 < $1",
-      "edge_c": 1.8,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXMIPRIMARY-13R26-MBIV",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxmiprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMIPRIMARY-13R26-RKIN",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxmiprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMIPRIMARY-13R26-TNYK",
-          "price_c": 80,
-          "url": "https://kalshi.com/markets/kxmiprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMIPRIMARY-13R26-ABOM",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxmiprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMIPRIMARY-13R26-ALOR",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxmiprimary"
-        }
-      ],
-      "detail": "Buy YES on all 5 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
