@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781833828,
-  "count": 2,
+  "generated_unix": 1781834132,
+  "count": 3,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,46 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXMLBNLEAST-26",
+      "summary": "Complete-set (YES) KXMLBNLEAST-26: sum=0.950 < $1",
+      "edge_c": 1.9,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXMLBNLEAST-26-WSH",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxmlbnleast"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXMLBNLEAST-26-MIA",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxmlbnleast"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXMLBNLEAST-26-ATL",
+          "price_c": 68,
+          "url": "https://kalshi.com/markets/kxmlbnleast"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXMLBNLEAST-26-PHI",
+          "price_c": 22,
+          "url": "https://kalshi.com/markets/kxmlbnleast"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXMLBNLEAST-26-NYM",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxmlbnleast"
+        }
+      ],
+      "detail": "Buy YES on all 5 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     },
     {
       "scanner": "complete-set",
