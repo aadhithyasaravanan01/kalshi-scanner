@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1781837431,
-  "count": 2,
+  "generated_unix": 1781837727,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,40 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXFEDCOMBO-26JUL",
-      "summary": "Complete-set (YES) KXFEDCOMBO-26JUL: sum=0.950 < $1",
-      "edge_c": 1.4,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXFEDCOMBO-26JUL-0-0",
-          "price_c": 55,
-          "url": "https://kalshi.com/markets/kxfedcombo"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXFEDCOMBO-26JUL-0-T0",
-          "price_c": 36,
-          "url": "https://kalshi.com/markets/kxfedcombo"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXFEDCOMBO-26JUL-25C-0",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxfedcombo"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXFEDCOMBO-26JUL-25C-T0",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxfedcombo"
-        }
-      ],
-      "detail": "Buy YES on all 4 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
