@@ -1,7 +1,23 @@
 {
-  "generated_unix": 1781835926,
-  "count": 2,
+  "generated_unix": 1781836231,
+  "count": 3,
   "findings": [
+    {
+      "scanner": "ETH",
+      "kind": "CENTER",
+      "key": "center:KXETHD-26JUN1823:Y",
+      "summary": "ETH ladder lagging spot 1702.4 (center 1690.0)",
+      "edge_c": 21.5,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXETHD-26JUN1823-T1709.99",
+          "price_c": 9,
+          "url": "https://kalshi.com/markets/kxethd"
+        }
+      ],
+      "detail": "Whole ladder centered 1690.0 vs spot 1702.4 (-0.90 sigma). Best strike K=1710: fair 29.0% vs market 7.5%."
+    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
