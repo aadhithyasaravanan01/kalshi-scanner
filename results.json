@@ -1,23 +1,7 @@
 {
-  "generated_unix": 1781968096,
-  "count": 3,
+  "generated_unix": 1781973883,
+  "count": 1,
   "findings": [
-    {
-      "scanner": "XRP",
-      "kind": "CENTER",
-      "key": "center:KXXRPD-26JUN2012:N",
-      "summary": "XRP ladder lagging spot 1.1 (center 1.2)",
-      "edge_c": -24.8,
-      "legs": [
-        {
-          "action": "BUY NO",
-          "ticker": "KXXRPD-26JUN2012-T1.1399",
-          "price_c": 25,
-          "url": "https://kalshi.com/markets/kxxrpd"
-        }
-      ],
-      "detail": "Whole ladder centered 1.2 vs spot 1.1 (+0.29 sigma). Best strike K=1: fair 50.7% vs market 75.5%."
-    },
     {
       "scanner": "complete-set",
       "kind": "LOCK",
@@ -39,28 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXHOUSERACE-FL10-26",
-      "summary": "Complete-set (YES) KXHOUSERACE-FL10-26: sum=0.979 < $1",
-      "edge_c": 1.2,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXHOUSERACE-FL10-26-D",
-          "price_c": 92,
-          "url": "https://kalshi.com/markets/kxhouserace"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXHOUSERACE-FL10-26-R",
-          "price_c": 6,
-          "url": "https://kalshi.com/markets/kxhouserace"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
