@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1782019099,
-  "count": 1,
+  "generated_unix": 1782032647,
+  "count": 3,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,74 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXCBDECISIONENGLAND-26JUL30",
+      "summary": "Complete-set (YES) KXCBDECISIONENGLAND-26JUL30: sum=0.970 < $1",
+      "edge_c": 1.8,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXCBDECISIONENGLAND-26JUL30-C25P",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxcbdecisionengland"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCBDECISIONENGLAND-26JUL30-C25",
+          "price_c": 3,
+          "url": "https://kalshi.com/markets/kxcbdecisionengland"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCBDECISIONENGLAND-26JUL30-HOLD",
+          "price_c": 89,
+          "url": "https://kalshi.com/markets/kxcbdecisionengland"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCBDECISIONENGLAND-26JUL30-H25",
+          "price_c": 1,
+          "url": "https://kalshi.com/markets/kxcbdecisionengland"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXCBDECISIONENGLAND-26JUL30-H25P",
+          "price_c": 2,
+          "url": "https://kalshi.com/markets/kxcbdecisionengland"
+        }
+      ],
+      "detail": "Buy YES on all 5 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXVAPRIMARY-10R26",
+      "summary": "Complete-set (YES) KXVAPRIMARY-10R26: sum=0.960 < $1",
+      "edge_c": 1.1,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXVAPRIMARY-10R26-JPER",
+          "price_c": 72,
+          "url": "https://kalshi.com/markets/kxvaprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVAPRIMARY-10R26-ASUT",
+          "price_c": 7,
+          "url": "https://kalshi.com/markets/kxvaprimary"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXVAPRIMARY-10R26-SWON",
+          "price_c": 17,
+          "url": "https://kalshi.com/markets/kxvaprimary"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
