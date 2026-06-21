@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1782032647,
-  "count": 3,
+  "generated_unix": 1782042582,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,46 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXCBDECISIONENGLAND-26JUL30",
-      "summary": "Complete-set (YES) KXCBDECISIONENGLAND-26JUL30: sum=0.970 < $1",
-      "edge_c": 1.8,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONENGLAND-26JUL30-C25P",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxcbdecisionengland"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONENGLAND-26JUL30-C25",
-          "price_c": 3,
-          "url": "https://kalshi.com/markets/kxcbdecisionengland"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONENGLAND-26JUL30-HOLD",
-          "price_c": 89,
-          "url": "https://kalshi.com/markets/kxcbdecisionengland"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONENGLAND-26JUL30-H25",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxcbdecisionengland"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXCBDECISIONENGLAND-26JUL30-H25P",
-          "price_c": 2,
-          "url": "https://kalshi.com/markets/kxcbdecisionengland"
-        }
-      ],
-      "detail": "Buy YES on all 5 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     },
     {
       "scanner": "complete-set",
