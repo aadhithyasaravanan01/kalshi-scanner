@@ -1,22 +1,28 @@
 {
-  "generated_unix": 1782048422,
-  "count": 4,
+  "generated_unix": 1782055313,
+  "count": 2,
   "findings": [
     {
-      "scanner": "SOL",
-      "kind": "CENTER",
-      "key": "center:KXSOLD-26JUN2110:Y",
-      "summary": "SOL ladder lagging spot 73.6 (center 72.3)",
-      "edge_c": 27.5,
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXHOUSERACE-MN04-26",
+      "summary": "Complete-set (YES) KXHOUSERACE-MN04-26: sum=0.968 < $1",
+      "edge_c": 2.4,
       "legs": [
         {
           "action": "BUY YES",
-          "ticker": "KXSOLD-26JUN2110-T73.9999",
-          "price_c": 11,
-          "url": "https://kalshi.com/markets/kxsold"
+          "ticker": "KXHOUSERACE-MN04-26-D",
+          "price_c": 92,
+          "url": "https://kalshi.com/markets/kxhouserace"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXHOUSERACE-MN04-26-R",
+          "price_c": 4,
+          "url": "https://kalshi.com/markets/kxhouserace"
         }
       ],
-      "detail": "Whole ladder centered 72.3 vs spot 73.6 (-1.15 sigma). Best strike K=74: fair 38.0% vs market 10.5%."
+      "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     },
     {
       "scanner": "complete-set",
@@ -39,56 +45,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXWT20MATCH-26JUN210800SOMYOR",
-      "summary": "Complete-set (YES) KXWT20MATCH-26JUN210800SOMYOR: sum=0.970 < $1",
-      "edge_c": 1.4,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXWT20MATCH-26JUN210800SOMYOR-YOR",
-          "price_c": 12,
-          "url": "https://kalshi.com/markets/kxwt20match"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXWT20MATCH-26JUN210800SOMYOR-SOM",
-          "price_c": 85,
-          "url": "https://kalshi.com/markets/kxwt20match"
-        }
-      ],
-      "detail": "Buy YES on all 2 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXVAPRIMARY-10R26",
-      "summary": "Complete-set (YES) KXVAPRIMARY-10R26: sum=0.960 < $1",
-      "edge_c": 1.1,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXVAPRIMARY-10R26-JPER",
-          "price_c": 72,
-          "url": "https://kalshi.com/markets/kxvaprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXVAPRIMARY-10R26-ASUT",
-          "price_c": 7,
-          "url": "https://kalshi.com/markets/kxvaprimary"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXVAPRIMARY-10R26-SWON",
-          "price_c": 17,
-          "url": "https://kalshi.com/markets/kxvaprimary"
-        }
-      ],
-      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
