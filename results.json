@@ -1,13 +1,13 @@
 {
-  "generated_unix": 1782094430,
+  "generated_unix": 1782114078,
   "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXHOUSERACE-MN04-26",
-      "summary": "Complete-set (YES) KXHOUSERACE-MN04-26: sum=0.968 < $1",
-      "edge_c": 2.4,
+      "summary": "Complete-set (YES) KXHOUSERACE-MN04-26: sum=0.969 < $1",
+      "edge_c": 2.3,
       "legs": [
         {
           "action": "BUY YES",
@@ -18,7 +18,7 @@
         {
           "action": "BUY YES",
           "ticker": "KXHOUSERACE-MN04-26-R",
-          "price_c": 4,
+          "price_c": 5,
           "url": "https://kalshi.com/markets/kxhouserace"
         }
       ],
