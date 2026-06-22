@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1782134219,
+  "generated_unix": 1782150794,
   "count": 2,
   "findings": [
     {
@@ -28,8 +28,8 @@
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXSENATERIR-26",
-      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.967 < $1",
-      "edge_c": 2.3,
+      "summary": "Complete-set (YES) KXSENATERIR-26: sum=0.968 < $1",
+      "edge_c": 2.2,
       "legs": [
         {
           "action": "BUY YES",
