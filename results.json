@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1782251965,
-  "count": 2,
+  "generated_unix": 1782256128,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,124 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "complete-set",
-      "kind": "LOCK",
-      "key": "cs-yes:KXMUSICREPORT-TOPSALE27DEC31",
-      "summary": "Complete-set (YES) KXMUSICREPORT-TOPSALE27DEC31: sum=0.950 < $1",
-      "edge_c": 1.4,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-TLOASG",
-          "price_c": 5,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-IMT",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-SOS",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-KPO",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-DEB",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-GNX",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-SHO",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-ONE",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-ICE",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-YOU",
-          "price_c": 10,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-FAL",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-ARI",
-          "price_c": 65,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-KIS",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-GRE",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-DAN",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-ART",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-OCT",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        },
-        {
-          "action": "BUY YES",
-          "ticker": "KXMUSICREPORT-TOPSALE27DEC31-THR",
-          "price_c": 1,
-          "url": "https://kalshi.com/markets/kxmusicreport"
-        }
-      ],
-      "detail": "Buy YES on all 18 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
