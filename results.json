@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1782223683,
-  "count": 1,
+  "generated_unix": 1782232822,
+  "count": 2,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,6 +23,34 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
+    },
+    {
+      "scanner": "complete-set",
+      "kind": "LOCK",
+      "key": "cs-yes:KXPGARYDER-RC27",
+      "summary": "Complete-set (YES) KXPGARYDER-RC27: sum=0.950 < $1",
+      "edge_c": 1.2,
+      "legs": [
+        {
+          "action": "BUY YES",
+          "ticker": "KXPGARYDER-RC27-EUR",
+          "price_c": 51,
+          "url": "https://kalshi.com/markets/kxpgaryder"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPGARYDER-RC27-USA",
+          "price_c": 38,
+          "url": "https://kalshi.com/markets/kxpgaryder"
+        },
+        {
+          "action": "BUY YES",
+          "ticker": "KXPGARYDER-RC27-TIE",
+          "price_c": 6,
+          "url": "https://kalshi.com/markets/kxpgaryder"
+        }
+      ],
+      "detail": "Buy YES on all 3 outcomes; net $0.99 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
     }
   ]
 }
