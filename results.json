@@ -1,6 +1,6 @@
 {
-  "generated_unix": 1782304550,
-  "count": 2,
+  "generated_unix": 1782314477,
+  "count": 1,
   "findings": [
     {
       "scanner": "complete-set",
@@ -23,28 +23,6 @@
         }
       ],
       "detail": "Buy YES on all 2 outcomes; net $0.98 for $1. VERIFY the event is collectively exhaustive (no missing outcome) + size."
-    },
-    {
-      "scanner": "silver",
-      "kind": "LOCK",
-      "key": "lock:KXSILVERD-26JUN2417-T60.25:KXSILVERD-26JUN2417-T60.50",
-      "summary": "Nesting lock: KXSILVERD-26JUN2417-T60.25 \u2287 KXSILVERD-26JUN2417-T60.50",
-      "edge_c": 2.0,
-      "legs": [
-        {
-          "action": "BUY YES",
-          "ticker": "KXSILVERD-26JUN2417-T60.25",
-          "price_c": 19,
-          "url": "https://kalshi.com/markets/kxsilverd"
-        },
-        {
-          "action": "BUY NO",
-          "ticker": "KXSILVERD-26JUN2417-T60.50",
-          "price_c": 79,
-          "url": "https://kalshi.com/markets/kxsilverd"
-        }
-      ],
-      "detail": "Guaranteed \u2265$1 payout for $0.98. Verify size before trading."
     }
   ]
 }
