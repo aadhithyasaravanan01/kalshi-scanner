@@ -1,5 +1,5 @@
 {
-  "generated_unix": 1782321755,
+  "generated_unix": 1782327834,
   "count": 2,
   "findings": [
     {
@@ -28,8 +28,8 @@
       "scanner": "complete-set",
       "kind": "LOCK",
       "key": "cs-yes:KXNEXTAG-29",
-      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.955 < $1",
-      "edge_c": 1.2,
+      "summary": "Complete-set (YES) KXNEXTAG-29: sum=0.953 < $1",
+      "edge_c": 1.4,
       "legs": [
         {
           "action": "BUY YES",
